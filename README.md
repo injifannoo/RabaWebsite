@@ -8,7 +8,6 @@ This repository contains the source code for the official **Raba Technologies** 
 - **Dynamic Routing**: Supports dynamic content for services and portfolio projects.  
 - **Contact Form**: Allows users to easily get in touch.  
 - **Social Media Integration**: Links to our social media platforms.  
-- **Google Analytics**: Tracks visitor behavior and website performance.  
 
 ## Getting Started  
 
