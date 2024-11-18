@@ -1,13 +1,14 @@
-# Raba Technologies Website  
+# RabaWebsite  
 
 ## Project Overview  
-This repository contains the source code for the official **Raba Technologies** website. Built using **Next.js**, the website serves as a professional platform to showcase our services, portfolio, and expertise. Its primary goal is to establish an online presence, attract potential clients, and facilitate easy communication through a user-friendly interface.
+This repository contains the source code for **RabaWebsite**, the official website for **Raba Technologies**. Built with **React**, this website aims to showcase our services, portfolio, and expertise, helping us establish a strong online presence and connect with potential clients.  
 
 ## Features  
-- **Responsive Design**: Ensures optimal viewing on desktops, tablets, and mobile devices.  
-- **Dynamic Routing**: Supports dynamic content for services and portfolio projects.  
-- **Contact Form**: Allows users to easily get in touch.  
-- **Social Media Integration**: Links to our social media platforms.  
+- **Responsive Design**: Optimized for desktops, tablets, and mobile devices.  
+- **Dynamic Content**: Enables seamless updates for services and portfolio sections.  
+- **Contact Form**: Allows users to easily get in touch with us.  
+- **Social Media Integration**: Provides direct links to our social media platforms.  
+- **Analytics Integration**: Tracks visitor behavior and website performance (using tools like Google Analytics).  
 
 ## Getting Started  
 
@@ -20,12 +21,12 @@ To run this project locally, ensure you have:
 
 1. **Clone the Repository**  
    ```bash  
-   git clone https://github.com/username/raba-technologies-website.git  
+   git clone https://github.com/username/RabaWebsite.git  
    ```  
 
 2. **Navigate to the Project Directory**  
    ```bash  
-   cd raba-technologies-website  
+   cd RabaWebsite  
    ```  
 
 3. **Install Dependencies**  
@@ -39,36 +40,43 @@ To run this project locally, ensure you have:
 
 4. **Run the Development Server**  
    ```bash  
-   npm run dev  
+   npm start  
    ```  
    or  
    ```bash  
-   yarn dev  
+   yarn start  
    ```  
 
 5. **View in Browser**  
-   Open your browser and navigate to `http://localhost:3000`.  
+   The website will be available at `http://localhost:3000`.  
 
 ## Project Structure  
 ```  
-raba-technologies-website/  
-├── components/        # Reusable UI components  
-├── pages/             # Next.js pages (includes dynamic routes)  
-├── public/            # Static files (images, icons, etc.)  
-├── styles/            # CSS or Tailwind CSS for styling  
-├── .env.local         # Environment variables (API keys, etc.)  
+RabaWebsite/  
+├── public/            # Static assets (images, icons, etc.)  
+├── src/  
+│   ├── components/    # Reusable React components  
+│   ├── pages/         # Main pages of the website  
+│   ├── styles/        # CSS or styling solutions  
+│   ├── utils/         # Utility functions and helpers  
+│   └── App.js         # Root component  
+├── .env               # Environment variables  
 ├── package.json       # Project metadata and scripts  
 └── README.md          # Project documentation  
 ```  
 
 ## Scripts  
-- `npm run dev` or `yarn dev`: Starts the development server.  
+- `npm start` or `yarn start`: Starts the development server.  
 - `npm run build` or `yarn build`: Builds the app for production.  
-- `npm run start` or `yarn start`: Runs the production server.  
+- `npm test` or `yarn test`: Runs tests (if implemented).  
 
 ## Deployment  
-For deployment
+For deployment, platforms like **Netlify**, **Vercel**, or **GitHub Pages** can be used.  
+
 1. Build the project:  
    ```bash  
    npm run build  
    ```  
+
+2. Deploy the `build` folder using your preferred hosting platform.  
+
