@@ -21,12 +21,20 @@ To run this project locally, ensure you have:
 
 1. **Clone the Repository**  
    ```bash  
+<<<<<<< HEAD
    git clone https://github.com/username/RabaWebsite.git  
+=======
+   git clone (https://github.com/RabaTechnologies/RabaWebsite.git)
+>>>>>>> f645bd15758474909849ca0eb5d72c9ba0271ef8
    ```  
 
 2. **Navigate to the Project Directory**  
    ```bash  
+<<<<<<< HEAD
    cd RabaWebsite  
+=======
+   cd RabaWebsite
+>>>>>>> f645bd15758474909849ca0eb5d72c9ba0271ef8
    ```  
 
 3. **Install Dependencies**  
