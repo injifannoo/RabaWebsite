@@ -88,7 +88,9 @@ RabaWebsite/
 │   ├── hooks/         # Custom hooks for managing state and effects.
 │   ├── context/       # Context API files for global state management.
 │   ├── utils/         # Utility functions and helpers  
-│   └── App.js         # Root component  
+│   └── App.jsx        # Main application component 
+│   └── main.jsx       # Entry point for React 
+│   └── routes.jsx     # Application routes (if using React Router)
 ├── .env               # Environment variables  
 ├── package.json       # Project metadata and scripts  
 └── README.md          # Project documentation  
