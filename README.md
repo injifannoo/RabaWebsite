@@ -75,20 +75,7 @@ To run this project locally, ensure you have:
 
 5. **View in Browser**  
    The website will be available at `http://localhost:3000`.  
-Folder Structure
-public/: Contains the static HTML file and favicon.
-src/: Main source code for the application.
-assets/: For images, fonts, and other static files.
-components/: Reusable components for the UI.
-pages/: Components that represent different pages in the application.
-styles/: Global styles including Sass files.
-hooks/: Custom hooks for managing state and effects.
-context/: Context API files for global state management.
-utils/: Utility functions for various tasks.
-Scripts
-npm run dev: Starts the development server.
-npm run build: Builds the project for production.
-npm run preview: Preview the production build.
+
 ## Project Structure  
 ```  
 RabaWebsite/  
@@ -108,9 +95,10 @@ RabaWebsite/
 ```  
 
 ## Scripts  
-- `npm run dev: Starts the development server.  
-- `npm run build` or `yarn build`: Builds the app for production.  
-- `npm test` or `yarn test`: Runs tests (if implemented).  
+- `npm run dev`: Starts the development server.  
+- `npm run build`: Builds the app for production.  
+- `npm run test`: Runs tests (if implemented). 
+- `npm run preview`: Preview the production build. 
 
 ## Deployment  
 For deployment, platforms like **Netlify**, **Vercel**, or **GitHub Pages** can be used.  
