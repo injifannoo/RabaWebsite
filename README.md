@@ -81,12 +81,12 @@ To run this project locally, ensure you have:
 RabaWebsite/  
 ├── public/            # Contains the static HTML file and favicon. 
 ├── src/
-│   ├── assets/ For images, fonts, and other static files.
+│   ├── assets/        # For images, fonts, and other static files.
 │   ├── components/    # Reusable React components  
 │   ├── pages/         # Main pages of the website  
 │   ├── styles/        # CSS or styling solutions
-│   ├── hooks/ Custom hooks for managing state and effects.
-│   ├── context/ Context API files for global state management.
+│   ├── hooks/         # Custom hooks for managing state and effects.
+│   ├── context/       # Context API files for global state management.
 │   ├── utils/         # Utility functions and helpers  
 │   └── App.js         # Root component  
 ├── .env               # Environment variables  
