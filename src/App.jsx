@@ -92,7 +92,6 @@ const App = () => {
       <div className=" bg-white flex-grow ">
 
         <section id="home" className="h-screen bg-cover bg-center" style={{ backgroundImage: `url('/assets/images/homebg.png')` }}>
-          <h1 className="text-white text-4xl font-bold text-center">Raba Technologies</h1>
           <Home/>
         </section>
 

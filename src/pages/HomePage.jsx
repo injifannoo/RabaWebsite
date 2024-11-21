@@ -3,7 +3,7 @@ import homeImage from '../assets/images/homebg.png';
 const HomePage = () => (
 
     
-    <div className="w-full h-screen bg-cover bg-center "
+    <div className="w-full h-screen bg-cover bg-center -mt-10 "
     style={{ backgroundImage: `url(${homeImage})` }}>
 
       <div className="flex flex-col w-full h-full bg-black bg-opacity-50"> 
