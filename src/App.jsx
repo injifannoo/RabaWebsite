@@ -90,7 +90,6 @@ const App = () => {
 
       {/* Sections */}
       <div className=" bg-white flex-grow ">
-
         <section id="home" className="h-screen bg-cover bg-center" style={{ backgroundImage: `url('/assets/images/homebg.png')` }}>
           <Home/>
         </section>
