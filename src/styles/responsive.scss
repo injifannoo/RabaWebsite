@@ -1,0 +1,29 @@
+// #contact {
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 5rem; // Same as mt-20 in Tailwind
+  
+//     @media (min-width: 768px) { // md breakpoint
+//       flex-direction: row;
+//       margin-top: 10rem; // Same as mt-40 in Tailwind
+//     }
+  
+//     .form-section {
+//       width: 100%; // Same as w-full
+//       padding-right: 1rem;
+  
+//       @media (min-width: 768px) {
+//         width: 66.66%; // Same as md:w-2/3
+//       }
+//     }
+  
+//     .description-section {
+//       width: 100%; // Same as w-full
+//       padding: 1.5rem;
+  
+//       @media (min-width: 768px) {
+//         width: 33.33%; // Same as md:w-1/3
+//       }
+//     }
+//   }
+  
