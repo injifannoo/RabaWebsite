@@ -47,6 +47,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
+          <a href="#home" className="hover:text-blue-300">
+          Blogs
+          </a>
+        </li>
+        <li>
           <a href="#contact" className="hover:text-blue-300">
             Contact
           </a>

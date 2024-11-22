@@ -12,26 +12,6 @@ const App = () => {
     <div className="flex flex-col min-h-screen  bg-white ">
       {/* Navigation */}
       <Navbar/>
-      {/* <nav className="bg-neutral-600 text-white p-4 fixed top-0 left-0 right-0 z-50">
-        <ul className="flex space-x-4 justify-center">
-          <li>
-            <a href="#home" className="hover:text-blue-300">Home</a>
-          </li>
-          <li>
-            <a href="#about-us" className="hover:text-blue-300">About Us</a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-blue-300">Services</a>
-          </li>
-          <li>
-            <a href="#our-project" className="hover:text-blue-300">Our Project</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-blue-300">Contact</a>
-          </li>
-        </ul>
-      </nav> */}
-
       {/* Sections */}
       <div className=" bg-white flex-grow ">
         <section id="home" className="h-screen bg-cover bg-center" style={{ backgroundImage: `url('/assets/images/homebg.png')` }}>
