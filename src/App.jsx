@@ -1,29 +1,3 @@
-// const App = () => {
-//   return (
-//     <Router>
-//       {/* Main container with flex and min-h-screen */}
-//       <div className="flex flex-col min-h-screen">
-//         <div className="flex-grow">
-//         <nav className="bg-gray-800 text-white p-4">
-//           <ul className="flex space-x-4 justify-center">
-//           <li>
-//               <a href="/home" className="hover:text-blue-300">Home</a>
-//             </li>
-//             <li>
-//               <a href="/about-us" className="hover:text-blue-300">About Us</a>
-//             </li>
-//             <li>
-//               <a href="/services" className="hover:text-blue-300">Services</a>
-//             </li>
-//             <li>
-//               <a href="/our-project" className="hover:text-blue-300">Our Project</a>
-//             </li>
-//             <li>
-//               <a href="/contact" className="hover:text-blue-300">Contact</a>
-//             </li>
-//           </ul>
-//         </nav>
-
 import React from "react";
 import Home from "./pages/HomePage.jsx";
 import AboutUs from "./pages/AboutUs";
