@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Logo from "./logo";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,9 @@ const Navbar = () => {
         isScrolled ? "bg-neutral-600 text-white shadow-lg" : "bg-transparent  text-white"
       }`}
     >
-      <ul className="flex space-x-4 justify-center p-4">
+      <div className="flex justify-between items-center px-6 py-4">
+      <Logo />
+      <ul className="flex space-x-4 justify-center px-20 py-4 text-2xl">
         <li>
           <a href="#home" className="hover:text-blue-300">
             Home
@@ -33,7 +36,7 @@ const Navbar = () => {
         </li>
         <li>
           <a href="#about-us" className="hover:text-blue-300">
-            About Us
+            About
           </a>
         </li>
         <li>
@@ -43,7 +46,12 @@ const Navbar = () => {
         </li>
         <li>
           <a href="#our-project" className="hover:text-blue-300">
-            Our Project
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#blog" className="hover:text-blue-300">
+          Blogs
           </a>
         </li>
         <li>
@@ -52,6 +60,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      </div>
     </nav>
   );
 };
