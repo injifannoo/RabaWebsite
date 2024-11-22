@@ -57,7 +57,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center p-4 mt-auto -mb-10">
-        &copy; {new Date().getFullYear()} Raabaa Technologies. All rights reserved.
+        &copy; {new Date().getFullYear()} Raba Technologies. All rights reserved.
       </footer>
     </div>
   );
