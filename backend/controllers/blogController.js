@@ -14,14 +14,14 @@ exports.getAllBlogs = async (req, res) => {
 // Create a new blog
 exports.createBlog = async (req, res) => {
     try {
-      const { title, content, author } = req.body;
+      const { title, content,conclusion,tags, author } = req.body;
   
       // Validate that all required fields are provided
       if (!title || !content || !author) {
         return res.status(400).json({ message: "Title, content, and author are required" });
       }
   
-      const newBlog = new Blog({ title, content, author });
+      const newBlog = new Blog({ title, content,conclusion,tags, author });
   
       await newBlog.save();  // Save the blog to the database
       res.status(201).json({

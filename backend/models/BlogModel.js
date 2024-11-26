@@ -10,6 +10,14 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,  // Ensures content is provided
     },
+    conclusion: {
+      type: String,
+      required: true,  // Ensures content is provided
+    },
+    tags: {
+      type: String,
+      required: true,  // Ensures author is specified
+    },
     author: {
       type: String,
       required: true,  // Ensures author is specified
