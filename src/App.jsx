@@ -6,6 +6,8 @@ import OurProject from "./pages/OurProject";
 import ContactForm from "./pages/ContactForm";
 import './styles/responsive.scss';
 import Navbar from "./components/Navbar";
+import Blogs from "./pages/BlogPage.jsx";  // Import the LatestBlogs component
+
 
 const App = () => {
   return (
@@ -28,6 +30,10 @@ const App = () => {
 
         <section id="our-project" className="min-h-screen flex justify-center items-center p-8 ">
           <OurProject />
+        </section>
+         {/* Latest Blogs Section */}
+         <section id="blogs" className="py-16 bg-gray-100">
+          <Blogs />
         </section>
 
         <section id="contact" className="flex justify-center items-center p-8 mt-auto mb-16">
