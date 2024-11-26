@@ -1,67 +1,70 @@
-import projectImage from "../assets/images/projectImage.png"
-const OurProject = () => (
-    <div className="p-8 mt-auto">
-      <h1 className="text-3xl font-bold text-center">Projects Done</h1>
-      <div className="mt-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        <div className="flex flex-col p-4 border rounded shadow  bg-gray-200">
-        <div >
-            <img src={projectImage} 
-            alt="Project Image" 
-            />
+
+import React from "react";
+
+const projects = [
+    {
+        title:"Project 1",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+
+    },
+    {
+        title:"Project 2",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+    },
+    {
+        title:"Project 3",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+    },
+    {
+        title:"Project 3",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+    },
+    {
+        title:"Project 4",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+    },
+    {
+        title:"Project 5",
+        imageUrl:"src/assets/images/projectImage.png", 
+        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+    },
+]
+
+const Projects = () => {
+    return (
+        <div className="text-secondary font-custom">
+            <div className="flex flex-col justify-center items-center my-10">
+                <h1 className="text-2xl font-bold text-primary my-5">Our projects</h1>
+                <div className="line"></div>
+            </div>
+            <div className="grid md:grid-cols-3 max-w-[1200px] md:gap-14 m-auto px-3 my-10">
+                {projects.map((project, indx) => (
+                    <div
+                        key={indx}
+                        className="flex flex-col justify-center items-center rounded-lg  group overflow-hidden transition-transform duration-300 transform hover:scale-105 border hover:bg-[#F1F4F3]"
+                    >
+                        <div className="w-full h-full hover:bg-[#FAF8F5] flex justify-center items-center p-2">
+                            <img
+                                width={200}
+                                height={150}
+                                src={project.imageUrl}
+                                alt={project.title}
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center items-center p-5 my-5">
+                            <h1 className="text-2xl mb-3 text-primary">{project.title}</h1>
+                            <p className="text-center">{project.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
-        <div >
-          <h2 className="text-xl font-semibold">Project Title</h2>
-          <p className="mt-2 text-gray-600">Here the  description  for the project goes. The problems
-that this project aims to solve and the way it differs from
-others who offer solution to this problem. 
-just write a description. </p>
-        </div>
-        </div>
-        <div className="flex flex-col p-4 border rounded shadow  bg-gray-200">
-        <div >
-            <img src={projectImage} 
-            alt="Project Image" 
-            />
-        </div>
-        <div >
-          <h2 className="text-xl font-semibold">Project Title</h2>
-          <p className="mt-2 text-gray-600">Here the  description  for the project goes. The problems
-that this project aims to solve and the way it differs from
-others who offer solution to this problem. 
-just write a description. </p>
-        </div>
-        </div>
-        <div className="flex flex-col p-4 border rounded shadow bg-gray-200">
-        <div >
-            <img src={projectImage} 
-            alt="Project Image" 
-            />
-        </div>
-        <div >
-          <h2 className="text-xl font-semibold">Project Title</h2>
-          <p className="mt-2 text-gray-600">Here the  description  for the project goes. The problems
-that this project aims to solve and the way it differs from
-others who offer solution to this problem. 
-just write a description. </p>
-        </div>
-        </div>
-        <div className="flex flex-col p-4 border rounded shadow  bg-gray-200">
-        <div >
-            <img src={projectImage} 
-            alt="Project Image" 
-            />
-        </div>
-        <div >
-          <h2 className="text-xl font-semibold">Project Title</h2>
-          <p className="mt-2 text-gray-600">Here the  description  for the project goes. The problems
-that this project aims to solve and the way it differs from
-others who offer solution to this problem. 
-just write a description. </p>
-        </div>
-        </div>
-      </div>
-    </div>
-  );
-  
-  export default OurProject;
-  
+    );
+};
+
+export default Projects;
