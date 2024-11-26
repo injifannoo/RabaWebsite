@@ -83,6 +83,13 @@ RabaWebsite/
 │   └── App.jsx        # Main application component 
 │   └── main.jsx       # Entry point for React 
 │   └── routes.jsx     # Application routes (if using React Router)
+├── Backend/            # New backend folder for Node.js server
+│   ├── models/        # MongoDB schema definitions
+│   ├── routes/        # API routes
+│   ├── controllers/   # Business logic for the routes
+│   ├── config/        # Database and environment configuration
+│   ├── middleware/    # Middleware for validation, authentication, etc.
+│   └── server.js       # Main entry point for the backend server
 ├── .env               # Environment variables  
 ├── package.json       # Project metadata and scripts  
 └── README.md          # Project documentation  
