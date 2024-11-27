@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/contact", require("./routes/contactRoutes"));
+app.use("/api/blogs", require("./routes/blogRoutes"));  // Make sure this is correctly set up
+
 
 // Start the server
 app.listen(PORT, () => {

@@ -50,7 +50,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#blog" className="hover:text-blue-300">
+          <a href="#blogs" className="hover:text-blue-300">
           Blogs
           </a>
         </li>
