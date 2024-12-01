@@ -51,7 +51,7 @@ const TeamSection = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-20 md:w-32 rounded-full absolute bottom- transform -translate-x-0 -translate-y-12"
+                className="w-20 md:w-32 rounded-full absolute bottom- transform -translate-x-0 -translate-y-12 md:-translate-x-0 md:-translate-y-16"
               />
               <div className="flex flex-col items-center border bg-gray-200 rounded-lg pt-10 md:pt-20 px-5">
               <h3 className="text-lg font-semibold text-gray-800">
