@@ -34,15 +34,17 @@ const App = () => {
 
       
 
-        <div className=" flex items-center justify-center mb-10">
-          <TestimonialCarousel />
-       </div>
+      
 
        <section id="" className="flex justify-center items-center p-8 mt-auto mb-16">
 
 
              <TeamSection />
         </section>
+
+        <div className=" flex items-center justify-center mb-10">
+          <TestimonialCarousel />
+       </div>
 
         <section id="contact" className="flex justify-center items-center p-8 mt-auto mb-16">
           <ContactForm />

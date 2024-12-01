@@ -42,18 +42,18 @@ const TeamSection = () => {
         <h2 className="text-center text-2xl font-bold text-gray-800 mb-20">
           OUR TEAM
         </h2>
-        <div className="max-w-5xl mx-aut grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 ">
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="w-96 bg-whit rounded-lg p-6 flex flex-col items-center"
+              className="w-auto  rounded-lg p-6 flex flex-col items-center"
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-32 h- rounded-full absolute bottom- transform -translate-x-0 -translate-y-14"
+                className="w-20 md:w-32 rounded-full absolute bottom- transform -translate-x-0 -translate-y-12"
               />
-              <div className="flex flex-col items-center border bg-gray-200 rounded-lg  pt-20 px-5">
+              <div className="flex flex-col items-center border bg-gray-200 rounded-lg pt-10 md:pt-20 px-5">
               <h3 className="text-lg font-semibold text-gray-800">
                 {member.name}
               </h3>
@@ -61,7 +61,7 @@ const TeamSection = () => {
               <p className="text-sm text-gray-600 text-center">
                 {member.description}
               </p>
-              <div className="flex space-x-4 mt-4">
+              <div className="flex space-x-4 mt-4 pb-5">
                 <a
                   href={member.github}
                   target="_blank"

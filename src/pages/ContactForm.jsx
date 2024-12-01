@@ -28,7 +28,7 @@ const ContactForm = () => (
       </div>
   
       {/* Description Section */}
-      <div className="description-section w-full md:w-2/3 p-10 bg-gray-200 mt-6 md:mt-20 rounded-md flex items-cente  ">
+      <div className="hidden md:block description-section w-full md:w-2/3 p-10 bg-gray-200 mt-6 md:mt-20 rounded-md items-cente  ">
         <p className="text-lg text-wrap text-justify font-serif">
           Raba technologies is a digital company based in Ethiopia. Our area of
           expertise is web and mobile app development. With a precision

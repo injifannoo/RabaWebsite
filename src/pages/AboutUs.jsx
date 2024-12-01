@@ -2,7 +2,7 @@ import aboutUs from '../assets/images/about-us.png';  // Import image
 
 const AboutUs = () => (
 
-    <div className="flex flex-row md:flex-row items-center md:justify-between md:gap-5">  {/* flex flex-col md:flex-row items-center md:justify-between */}
+    <div className="flex flex-col md:flex-row items-center md:justify-between md:gap-5">  {/* flex flex-col md:flex-row items-center md:justify-between */}
       <div className=" flex flex-col w-full md:w-1/2 text-left py-0 px-3"> {/*w-full md:w-1/2 text-left*/}
         <h1 className="text-3xl font-bold text-cente">About Us</h1>
         <p className="mt-4 text-lg text-start text-gray-700">
