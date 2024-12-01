@@ -1,9 +1,9 @@
 const ContactForm = () => ( 
-    <div className="contact-form-container flex flex-col md:flex-row md:space-x-4 mt-auto">
+    <div className="contact-form-container flex flex-col md:flex-row md:space-x-4 mt-auto md:justify-between md:mx-20">
       {/* Form Section */}
-      <div className="form-section w-full md:w-2/3 px-4">
+      <div className="form-section w-full md:w-5/6 p-4 flex flex-col items-center">
         <h1 className="text-2xl md:text-3xl font-bold text-center">Contact Us</h1>
-        <form className="mt-6 max-w-md mx-auto space-y-4">
+        <form className="mt-6 max-w-lg mx-auto md:mx-10 px-auto space-y-4">
           <input
             type="text"
             placeholder="Your Name"
@@ -28,8 +28,8 @@ const ContactForm = () => (
       </div>
   
       {/* Description Section */}
-      <div className="description-section w-full md:w-1/3 border border-black p-8 bg-gray-200 mt-6 md:mt-0">
-        <p>
+      <div className="description-section w-full md:w-2/3 p-10 bg-gray-200 mt-6 md:mt-20 rounded-md flex items-cente  ">
+        <p className="text-lg text-wrap text-justify font-serif">
           Raba technologies is a digital company based in Ethiopia. Our area of
           expertise is web and mobile app development. With a precision
           commitment to results, the Raba team has refined the science of the

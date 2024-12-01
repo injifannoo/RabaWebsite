@@ -6,6 +6,8 @@ import OurProject from "./pages/OurProject";
 import ContactForm from "./pages/ContactForm";
 import './styles/responsive.scss';
 import Navbar from "./components/Navbar";
+import TestimonialCarousel from "./pages/Testimonials.jsx";
+import TeamSection from "./pages/Team.jsx";
 
 const App = () => {
   return (
@@ -30,9 +32,22 @@ const App = () => {
           <OurProject />
         </section>
 
+      
+
+        <div className=" flex items-center justify-center mb-10">
+          <TestimonialCarousel />
+       </div>
+
+       <section id="" className="flex justify-center items-center p-8 mt-auto mb-16">
+
+
+             <TeamSection />
+        </section>
+
         <section id="contact" className="flex justify-center items-center p-8 mt-auto mb-16">
           <ContactForm />
         </section>
+
       </div>
 
       {/* Footer */}

@@ -23,12 +23,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-neutral-600 text-white shadow-lg" : "bg-transparent  text-white"
+        isScrolled ? "bg-gray-200 text-black shadow-sm opacity-90" : "bg-transparent  text-white"
       }`}
     >
-      <div className="flex justify-between items-center px-6 py-4">
+      <div className="flex justify-between items-center px-6 py-3">
       <Logo />
-      <ul className="flex space-x-4 justify-center px-20 py-4 text-2xl">
+      <ul className="flex space-x-4 justify-center items-center px-20 py-2 text-xl">
         <li>
           <a href="#home" className="hover:text-blue-300">
             Home
@@ -54,12 +54,14 @@ const Navbar = () => {
           Blogs
           </a>
         </li>
-        <li>
-          <a href="#contact" className="hover:text-blue-300">
-            Contact
-          </a>
-        </li>
+        
       </ul>
+      <div>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+          Contact Us
+        </button>
+
+      </div>
       </div>
     </nav>
   );
