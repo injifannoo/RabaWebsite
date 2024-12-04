@@ -81,6 +81,8 @@ import AdminLogin from './pages/admin/AdminLogin';
 import LoginPage from "./pages/LoginPage";
 import AdminDashboard from './pages/admin/AdminDashboard';
 import PrivateRoute from './components/PrivateRoute';
+import TeamSection from "./pages/Team.jsx";
+import Testimonials from "./pages/Testimonials.jsx";
 
 const SinglePageLayout = () => {
   return (
@@ -116,6 +118,15 @@ const SinglePageLayout = () => {
       <section id="blogs" className="py-16 bg-gray-100">
         <Blogs />
       </section>
+
+      <section id="teams" className="flex justify-center items-center p-8 mt-auto mb-16">
+
+             <TeamSection />
+        </section>
+
+        <section id="testimonials" className=" flex items-center justify-center mb-10">
+          <Testimonials />
+       </section>
 
       {/* Contact Section */}
       <section
