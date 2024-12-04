@@ -6,7 +6,6 @@ const projects = [
         title:"Project 1",
         imageUrl:"src/assets/images/projectImage.png", 
         description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
-
     },
     {
         title:"Project 2",

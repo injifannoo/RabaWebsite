@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,11 +12,13 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/admin/login', { email, password });
+      const response = await axios.post('http://localhost:3000/api/auth/admin/login', { email, password });
       localStorage.setItem('adminToken', response.data.token); // Store the token
-      window.location.href = '/admin/dashboard'; // Redirect to Admin Dashboard
+      window.location.href = '/dashboard'; // Redirect to Admin Dashboard
     } catch (err) {
-      setError('Invalid credentials. Please try again.');
+
+      console.error('Login error: ', err.response ? err.response.data : err.message);
+      setError('Invalid credential. Please try again.');
     }
   };
 

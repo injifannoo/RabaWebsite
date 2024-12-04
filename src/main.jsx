@@ -5,8 +5,13 @@ import App from "./App";
 import "./styles/index.css"; // Import Tailwind CSS here
 import "./styles/index.scss";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>
+import { BrowserRouter } from 'react-router-dom'; // Only wrap the entire app with BrowserRouter
+import { AuthProvider } from './context/AuthContext';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </BrowserRouter>
 );

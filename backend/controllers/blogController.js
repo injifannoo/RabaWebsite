@@ -33,3 +33,22 @@ exports.createBlog = async (req, res) => {
     res.status(500).json({ message: "Error creating blog", error: error.message });
 }
 };
+// Update a blog
+exports.updateBlog= async (req, res) => {
+  try {
+    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.status(200).json(updatedBlog);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to update blog' });
+  }
+};
+
+// Delete a blog
+exports.deleteBlogs= async (req, res) => {
+  try {
+    await Blog.findByIdAndDelete(req.params.id);
+    res.status(200).json({ message: 'Blog deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to delete blog' });
+}
+};

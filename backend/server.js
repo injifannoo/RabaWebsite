@@ -1,12 +1,19 @@
 const express = require("express");
-const cors = require("cors");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const authRoutes = require('./routes/authRoutes');
+const blogRoutes = require('./routes/blogRoutes');
+const cors = require('cors');
+const app = express();
 
+app.use(cors({
+  origin: 'http://localhost:5173', // Add the frontend URL here
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 dotenv.config();
 
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
@@ -18,7 +25,8 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/contact", require("./routes/contactRoutes"));
-app.use("/api/blogs", require("./routes/blogRoutes"));  // Make sure this is correctly set up
+app.use('/api/auth', authRoutes);
+app.use('/api/blogs', blogRoutes);
 
 
 // Start the server
