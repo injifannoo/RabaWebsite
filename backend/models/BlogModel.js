@@ -14,6 +14,7 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,  // Ensures content is provided
     },
+    image: { type: String },
     tags: {
       type: String,
       required: true,  // Ensures author is specified
@@ -22,7 +23,9 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,  // Ensures author is specified
     },
-    date: {
+    status: { type: String, enum: ['draft', 'published'], default: 'draft' },
+
+    createdAt: {
       type: Date,
       default: Date.now,  // Default date to the current date and time
     },
