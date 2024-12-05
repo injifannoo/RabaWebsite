@@ -81,8 +81,9 @@ import AdminLogin from './pages/admin/AdminLogin';
 import LoginPage from "./pages/LoginPage";
 import AdminDashboard from './pages/admin/AdminDashboard';
 import PrivateRoute from './components/PrivateRoute';
-import TeamSection from "./pages/Team.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
+import TeamSection from "./pages/About/Team.jsx";
+import LearnMore from "./pages/About/LearnMore.jsx";
 
 const SinglePageLayout = () => {
   return (
@@ -123,6 +124,10 @@ const SinglePageLayout = () => {
 
              <TeamSection />
         </section>
+        {/* <section id="learn-more" className="flex justify-center items-center p-8 mt-auto mb-16">
+
+<LearnMore />
+</section> */}
 
         <section id="testimonials" className=" flex items-center justify-center mb-10">
           <Testimonials />
@@ -143,6 +148,16 @@ const AppRoutes = () => (
     <Routes>
       {/* Single Page Layout */}
       <Route path="/" element={<SinglePageLayout />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/our-project" element={<OurProject />} />
+           <Route path="/blogs" element={<Blogs />} />
+           <Route path="/contact" element={<ContactForm />} />
+           <Route path="/admin" element={<LoginPage />} />
+           <Route path="/learn-more" element={<LearnMore/>}/>
+          <Route path="/teams" element={<TeamSection/>}/>
+          <Route path="*" element={<ErrorPage />} />
 
       {/* Other Routes */}
       <Route path="/admin" element={<LoginPage />} />
