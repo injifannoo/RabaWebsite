@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const blogSchema = new mongoose.Schema(
   {
@@ -33,4 +33,5 @@ const blogSchema = new mongoose.Schema(
   { timestamps: true }  // Adds createdAt and updatedAt fields automatically
 );
 
-module.exports = mongoose.model("Blog", blogSchema);
+const Blog = mongoose.model("Blog", blogSchema);
+export default Blog;

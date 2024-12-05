@@ -1,7 +1,7 @@
-const Blog = require('../models/BlogModel'); 
+import Blog from '../models/BlogModel.js'; 
 
 // Get all blogs
-exports.getAllBlogs = async (req, res) => {
+ const getAllBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find();
     res.status(200).json(blogs);  // Return the list of blogs
@@ -12,7 +12,7 @@ exports.getAllBlogs = async (req, res) => {
 };
 
 // Create a new blog
-exports.createBlog = async (req, res) => {
+ const createBlog = async (req, res) => {
     try {
       const { title, content,conclusion,tags, author } = req.body;
   
@@ -34,7 +34,7 @@ exports.createBlog = async (req, res) => {
 }
 };
 // Update a blog
-exports.updateBlog= async (req, res) => {
+ const updateBlog= async (req, res) => {
   try {
     const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.status(200).json(updatedBlog);
@@ -44,7 +44,7 @@ exports.updateBlog= async (req, res) => {
 };
 
 // Delete a blog
-exports.deleteBlogs= async (req, res) => {
+ const deleteBlogs= async (req, res) => {
   try {
     await Blog.findByIdAndDelete(req.params.id);
     res.status(200).json({ message: 'Blog deleted successfully' });
@@ -52,3 +52,4 @@ exports.deleteBlogs= async (req, res) => {
     res.status(500).json({ error: 'Failed to delete blog' });
 }
 };
+export default { getAllBlogs, createBlog, updateBlog, deleteBlogs };

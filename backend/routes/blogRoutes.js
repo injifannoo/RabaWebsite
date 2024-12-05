@@ -1,6 +1,7 @@
-const express = require("express");
-const blogController=require('../controllers/blogController')
-const { authenticate, authorize } = require('../middleware/authMiddleware');
+import express from "express";
+import blogController from '../controllers/blogController.js';
+import authMiddleware from '../middleware/authMiddleware.js';
+const { authenticate, authorize } = authMiddleware;
 
 const router = express.Router();
 router.get('/', blogController.getAllBlogs); // No authenticate middleware here
@@ -8,7 +9,7 @@ router.post('/', authenticate, authorize(['Super Admin', 'Editor']), blogControl
 router.put('/:id', authenticate, authorize(['Super Admin', 'Editor']), blogController.updateBlog);
 router.delete('/:id', authenticate, authorize(['Super Admin']), blogController.deleteBlogs);
 
-module.exports = router;
+export default router;
 // // Get all blogs
 // router.get("/", getAllBlogs);
 
@@ -19,4 +20,3 @@ module.exports = router;
 // //delete blogs
 // router.delete("/", deleteBlogs);
 
-module.exports = router;

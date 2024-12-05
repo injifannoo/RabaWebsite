@@ -1,12 +1,14 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const dotenv = require("dotenv");
-const connectDB = require("./config/db");
-const authRoutes = require('./routes/authRoutes');
-const blogRoutes = require('./routes/blogRoutes');
-const cors = require('cors');
-const app = express();
+// const express from "express");
+import express from "express";
+import bodyParser from "body-parser";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import authRoutes from './routes/authRoutes.js';
+import blogRoutes from './routes/blogRoutes.js';
+import cors from 'cors';
+import contactRoutes from './routes/contactRoutes.js';
 
+const app = express();
 app.use(cors({
   origin: 'http://localhost:5173', // Add the frontend URL here
   methods: ['GET', 'POST'],
@@ -24,7 +26,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use("/api/contact", require("./routes/contactRoutes"));
+app.use("/api/contact", contactRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
 

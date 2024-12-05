@@ -1,6 +1,6 @@
-const Contact = require("../models/ContactModel");
+import Contact from "../models/ContactModel";
 
-exports.submitContact = async (req, res) => {
+const submitContact = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
@@ -21,7 +21,7 @@ exports.submitContact = async (req, res) => {
 };
 
 // Get all contact messages
-exports.getMessages = async (req, res) => {
+const getMessages = async (req, res) => {
   try {
     const messages = await Contact.find(); // Fetch all messages from the database
     res.status(200).json(messages);
@@ -32,7 +32,7 @@ exports.getMessages = async (req, res) => {
 };
 
 // Mark as resolved
-exports.updateMessageStatus = async (req, res) => {
+const updateMessageStatus = async (req, res) => {
   try {
     const { id } = req.params;
     const { status } = req.body;
@@ -45,7 +45,7 @@ exports.updateMessageStatus = async (req, res) => {
 };
 
 // Reply to a user (example: email integration)
-exports.replyToUser = async (req, res) => {
+const replyToUser = async (req, res) => {
   const { email, replyMessage } = req.body;
 
   try {
@@ -56,4 +56,5 @@ exports.replyToUser = async (req, res) => {
     res.status(500).json({ error: 'Failed to send reply' });
   }
 };
+export default {submitContact,getMessages, updateMessageStatus,replyToUser};
 
