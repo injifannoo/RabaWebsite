@@ -38,8 +38,8 @@ const TeamSection = () => {
     ];
   
     return (
-      <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 py-20">
-        <h2 className="text-center text-3xl font-bold text-white mb-12">OUR TEAM</h2>
+      <div className="bg-gray-200 py-20">
+        <h2 className="text-center text-3xl font-bold text-black mb-12">OUR TEAM</h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {teamMembers.map((member) => (
             <div
