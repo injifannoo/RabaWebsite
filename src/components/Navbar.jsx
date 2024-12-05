@@ -28,6 +28,11 @@ const Navbar = () => {
     return isAdmin() ? element : <Navigate to="/admin/login" />;
   };
 
+  // Handle closing the menu when a link is clicked
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -103,42 +108,43 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <ul
-            className="absolute top-full left-0 w-full bg-neutral-600 text-white text-center space-y-4 py-4 shadow-lg md:hidden"
+            className="absolute top-full right-0 w-3/4 bg-neutral-600 text-white text-center space-y-4 py-4 shadow-lg md:hidden transform transition-transform duration-300 ease-in-out"
+            style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(100%)" }}
           >
             <li>
-              <a href="/" className="block hover:text-blue-300">
+              <a href="/" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Home
               </a>
             </li>
             {isAdmin() && (
               <li>
-                <a href="/admin/dashboard" className="block hover:text-blue-300">
+                <a href="/admin/dashboard" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                   Admin Panel
                 </a>
               </li>
             )}
             <li>
-              <a href="#about-us" className="block hover:text-blue-300">
+              <a href="#about-us" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 About
               </a>
             </li>
             <li>
-              <a href="#services" className="block hover:text-blue-300">
+              <a href="#services" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Services
               </a>
             </li>
             <li>
-              <a href="#our-project" className="block hover:text-blue-300">
+              <a href="#our-project" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Projects
               </a>
             </li>
             <li>
-              <a href="#blogs" className="block hover:text-blue-300">
+              <a href="#blogs" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Blogs
               </a>
             </li>
             <li>
-              <a href="#contact" className="block hover:text-blue-300">
+              <a href="#contact" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Contact
               </a>
             </li>
