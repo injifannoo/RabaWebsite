@@ -38,13 +38,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container flex flex-col md:flex-row md:space-x-10 mt-8">
-     
+    <div className="bg-white text-secondary font-custom contact-form-container flex flex-col md:flex-row md:space-x-10 mt-8">
+  
      {/*  Description Section */}
 
-     <div className="description-section w-full md:w-1/3 p-6 md:p-8 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-600 text-white rounded-lg shadow-lg flex items-center justify-center">
+     <div className="description-section w-full md:w-1/3 p-6 ml-4 md:p-8 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-600 text-white rounded-lg shadow-lg flex items-center justify-center">
   <div>
-    <h2 className="text-3xl font-bold mb-4">Get In Touch With Us</h2>
+    <h2 className="text-center text-3xl font-bold text-black mb-12">Get In Touch With Us</h2>
     <p className="text-lg mb-6">
       We're always here to help! Whether you have a question, need support, or want to collaborate, don't hesitate to reach out. Our team is ready to provide you with the best solutions tailored to your needs. Reach out today, and let's start the conversation!
     </p>

@@ -38,8 +38,13 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 rounded-lg max-w-4xl">
-      <div className="flex items-center justify-center space-x-4">
+    <div className=" bg-white w-full flex flex-col items-center rounded-lg py-4">
+      <div className="flex flex-col justify-center items-center my-10">
+        <h2 className="text-center text-3xl font-bold text-black mb-12">Testimonies</h2>
+        <div className="line"></div>
+      </div>
+
+      <div className="flex items-center justify-center space-x-4  max-w-[1200px] md:gap-14 m-auto px-3 my-10">
         <button
           onClick={handlePrev}
           className="text-black hover:text-gray-800 font-extrabold text-3xl"
@@ -67,9 +72,8 @@ const TestimonialCarousel = () => {
         {testimonials.map((_, index) => (
           <span
             key={index}
-            className={`h-2 w-2 rounded-full ${
-              currentIndex === index ? "bg-gray-800" : "bg-gray-300"
-            }`}
+            className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-gray-800" : "bg-gray-300"
+              }`}
           ></span>
         ))}
       </div>

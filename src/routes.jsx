@@ -19,7 +19,7 @@
 //           <HomePage/>
 //         </section>
 
-//         <section id="about-us" className="flex justify-center items-center p-8">
+//         <section id="about-us" className="flex justify-center items-center p-2">
 //           <AboutUs />
 //         </section>
 
@@ -87,7 +87,7 @@ import LearnMore from "./pages/About/LearnMore.jsx";
 
 const SinglePageLayout = () => {
   return (
-    <div className="bg-white flex-grow">
+    <div className="bg-gray-100 flex-grow">
       {/* Home Section */}
       <section
         id="home"
@@ -98,45 +98,45 @@ const SinglePageLayout = () => {
       </section>
 
       {/* About Us Section */}
-      <section id="about-us" className="flex justify-center items-center p-8">
+      <section id="about-us" className="flex justify-center items-center px-1 py-8">
         <AboutUs />
       </section>
 
       {/* Services Section */}
-      <section id="services" className="flex justify-center items-center p-8">
+      <section id="services" className="flex justify-center items-center px-1 py-8">
         <Services />
       </section>
 
       {/* Our Project Section */}
       <section
         id="our-project"
-        className="min-h-screen flex justify-center items-center p-8"
+        className="min-h-screen flex justify-center items-center px-1 py-8"
       >
         <OurProject />
       </section>
 
       {/* Blogs Section */}
-      <section id="blogs" className="py-16 bg-gray-100">
+      <section id="blogs" className="min-h-screen flex justify-center items-center px-1 py-8">
         <Blogs />
       </section>
 
-      <section id="teams" className="flex justify-center items-center p-8 mt-auto mb-16">
+      <section id="teams" className="min-h-screen flex justify-center items-center px-1 py-8">
 
              <TeamSection />
         </section>
-        {/* <section id="learn-more" className="flex justify-center items-center p-8 mt-auto mb-16">
+        {/* <section id="learn-more" className="flex justify-center items-center px-1 py-8 mt-auto mb-16">
 
 <LearnMore />
 </section> */}
 
-        <section id="testimonials" className=" flex items-center justify-center mb-10">
+        <section id="testimonials" className=" min-h-screen flex justify-center items-center px-1 py-8">
           <Testimonials />
        </section>
 
       {/* Contact Section */}
       <section
         id="contact"
-        className="flex justify-center items-center p-8 mt-auto mb-16"
+        className="min-h-screen flex justify-center items-center px-1 py-8"
       >
         <ContactForm />
       </section>

@@ -36,9 +36,9 @@ const services = [
 
 const Services = () => {
     return (
-        <div className="text-secondary font-custom">
+        <div className="bg-white w-full text-secondary font-custom ">
             <div className="flex flex-col justify-center items-center my-10">
-                <h1 className="text-2xl font-bold text-primary my-5">OUR SERVICES</h1>
+                <h2 className="text-center text-3xl font-bold text-black mb-12">Our Services</h2>
                 <div className="line"></div>
             </div>
             <div className="grid md:grid-cols-3 max-w-[1200px] md:gap-14 m-auto px-3 my-10">

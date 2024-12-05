@@ -8,7 +8,7 @@ const BlogCard = ({ blog }) => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+    <div className=" bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
       <div className="text-justify ml-10 my-10">
      <div className="grid grid-cols-2 gap-6 px-4 md-4"> 
       <p className="text-sm text-gray-500 align-baseline">{new Date(blog.date).toLocaleDateString()}</p>

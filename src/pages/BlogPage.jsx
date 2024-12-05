@@ -17,8 +17,11 @@ const LatestBlogs = () => {
   }, []);
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold text-center mb-8">Latest Blogs</h2>
+    <div className="bg-white w-full ">
+      <div className="flex flex-col justify-center items-center my-10">
+        <h2 className="text-center text-3xl font-bold text-black mb-12">Blogs</h2>
+        <div className="line"></div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 px-4  mx-10">
         {blogs.slice(0, 3).map((blog) => (
           <BlogCard key={blog._id} blog={blog} />
