@@ -54,6 +54,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import AppRoutes from "./routes.jsx";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer.jsx"
 
 const App = () => {
   const location = useLocation();
@@ -71,11 +72,11 @@ const App = () => {
 
       {/* App Routes */}
       <AppRoutes />
-
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center p-4 mt-auto -mb-10">
+<Footer/>
+      {/* <footer className="bg-gray-800 text-white text-center p-4 mt-auto -mb-10">
         &copy; {new Date().getFullYear()} Raba Technologies. All rights reserved.
-      </footer>
+      </footer> */}
     </div>
   );
 };
