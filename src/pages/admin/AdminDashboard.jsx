@@ -1,42 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import BlogList from '../../components/Blog/BlogList';
+//import createBlog from '../../components/Blog/createBlog';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
-  const [blogInsights, setBlogInsights] = useState({});
-  const [contactMetrics, setContactMetrics] = useState({});
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchAnalytics = async () => {
-      const token = localStorage.getItem('token');
-      const config = { headers: { Authorization: `Bearer ${token}` } };
-
-      try {
-        const blogResponse = await axios.get('/api/analytics/blogs', config);
-        const contactResponse = await axios.get('/api/analytics/contacts', config);
-        setBlogInsights(blogResponse.data);
-        setContactMetrics(contactResponse.data);
-      } catch (error) {
-        console.error('Failed to fetch analytics');
-      }
-    };
-
-    fetchAnalytics();
-  }, []);
+  const handleCreateBlog = () => {
+    navigate('/create-blog'); // Navigate to the "Create Blog" page
+  };
 
   return (
-    <div className="dashboard">
-      <h2>Admin Dashboard</h2>
-      <div className="stats">
-        <div>
-          <h3>Blog Insights</h3>
-          <p>Total Blogs: {blogInsights.totalBlogs}</p>
-          <p>Published Blogs: {blogInsights.publishedBlogs}</p>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h1 className="text-3xl font-semibold text-gray-800 mb-6">Dashboard</h1>
+
+
+         {/* Create Blog Button */}
+         <div className="flex justify-end mb-4">
+          <button
+            onClick={handleCreateBlog}
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          >
+            Create Blog
+          </button>
         </div>
-        <div>
-          <h3>Contact Metrics</h3>
-          <p>Total Messages: {contactMetrics.totalMessages}</p>
-          <p>Resolved Messages: {contactMetrics.resolvedMessages}</p>
-        </div>
+        {/* Display the BlogList component */}
+        <BlogList />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AdminLogin from "./AdminLogin";
 import AdminDashboard from "./AdminDashboard";
+import CreateBlog from "../../components/Blog/createBlog";
 
 const AdminPage = () => {
   return (
@@ -11,7 +12,7 @@ const AdminPage = () => {
         {/* Admin Login */}
         <Route path="/" element={<AdminLogin />} />
         {/* Admin Dashboard */}
-        <Route path="/dashboard" element={<AdminDashboard />} />
+        <Route path="/create" element={<CreateBlog />} />
       </Routes>
     </div>
   );
