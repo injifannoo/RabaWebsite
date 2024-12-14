@@ -1,10 +1,10 @@
-const express = require('express');
-const { authenticate, authorize } = require('../middleware/authMiddleware');
-const analyticsController = require('../controllers/analyticsController');
-
+import express from "express";
+import analyticsController from '../controllers/analyticsController.js';
+import authMiddleware from '../middleware/authMiddleware.js';
+const { authenticate, authorize } = authMiddleware;
 const router = express.Router();
 
-router.get('/blogs', authenticate, authorize(['Super Admin']), analyticsController.getBlogInsights);
-router.get('/contacts', authenticate, authorize(['Super Admin']), analyticsController.getContactMetrics);
+router.get('/blogs', authenticate, authorize(['admin']), analyticsController.getBlogInsights);
+router.get('/contacts', authenticate, authorize(['admin']), analyticsController.getContactMetrics);
 
-module.exports = router;
+export default router;

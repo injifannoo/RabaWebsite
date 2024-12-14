@@ -5,13 +5,15 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import authRoutes from './routes/authRoutes.js';
 import blogRoutes from './routes/blogRoutes.js';
+import analyticsRoutes from './routes/analyticsRoutes.js'
 import cors from 'cors';
 import contactRoutes from './routes/contactRoutes.js';
 
 const app = express();
 app.use(cors({
   origin: 'http://localhost:5173', // Add the frontend URL here
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow necessary headers
   credentials: true
 }));
 dotenv.config();
@@ -29,6 +31,7 @@ app.use(bodyParser.json());
 app.use("/api/contact", contactRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/analytics/', analyticsRoutes)
 
 
 // Start the server

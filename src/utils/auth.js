@@ -1,6 +1,6 @@
 import * as jwtDecode from 'jwt-decode';
 export const isAdmin = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('adminToken');
   if (!token) {
     console.log("No token found");
     return false;

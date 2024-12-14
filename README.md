@@ -75,7 +75,12 @@ RabaWebsite/
 ├── src/
 │   ├── assets/        # For images, fonts, and other static files.
 │   ├── components/    # Reusable React components  
+      ├── Blog
+      ├── Message
 │   ├── pages/         # Main pages of the website  
+      ├── admin
+            ├── Blogs
+            ├── Messages
 │   ├── styles/        # CSS or styling solutions
 │   ├── hooks/         # Custom hooks for managing state and effects.
 │   ├── context/       # Context API files for global state management.

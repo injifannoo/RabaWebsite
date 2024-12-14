@@ -27,7 +27,8 @@ router.post('/admin/login', async (req, res) => {
       return res.status(500).json({ error: 'Internal server error: missing JWT_SECRET' });
     }
 
-    const token = jwt.sign({ id: admin._id, role: admin.role }, jwtSecret, { expiresIn: '1d' });
+    const token = jwt.sign({ id: admin._id, role: admin.role }, jwtSecret, { expiresIn: '100d' });
+    console.log(`Password match: ${token}`);
     res.status(200).json({ token });
   } catch (error) {
     console.error('Error during login:', error);  // Log the actual error

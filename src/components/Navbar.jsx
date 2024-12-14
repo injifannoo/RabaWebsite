@@ -71,13 +71,7 @@ const Navbar = () => {
               Home
             </a>
           </li>
-          {isAdmin() && (
-            <li>
-              <a href="/admin/dashboard" className="hover:text-blue-300">
-                Admin Panel
-              </a>
-            </li>
-          )}
+         
           <li>
             <a href="#about-us" className="hover:text-blue-300">
               About
@@ -118,7 +112,7 @@ const Navbar = () => {
             </li>
             {isAdmin() && (
               <li>
-                <a href="/admin/dashboard" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+                <a href="/dashboard" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                   Admin Panel
                 </a>
               </li>

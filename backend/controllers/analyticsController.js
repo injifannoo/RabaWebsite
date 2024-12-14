@@ -1,10 +1,10 @@
-const Blog = require('../models/Blog');
-const Contact = require('../models/Contact');
+import Blog from '../models/BlogModel.js';
+import Contact from '../models/ContactModel.js';
 
 // Get blog insights
-exports.getBlogInsights = async (req, res) => {
+const getBlogInsights = async (req, res) => {
   try {
-    const blogCount = await Blog.countDocuments();
+    const blogCount = (await Blog.countDocuments());
     const publishedCount = await Blog.countDocuments({ status: 'published' });
 
     res.status(200).json({ totalBlogs: blogCount, publishedBlogs: publishedCount });
@@ -14,7 +14,7 @@ exports.getBlogInsights = async (req, res) => {
 };
 
 // Get contact form metrics
-exports.getContactMetrics = async (req, res) => {
+const getContactMetrics = async (req, res) => {
   try {
     const totalMessages = await Contact.countDocuments();
     const resolvedMessages = await Contact.countDocuments({ status: 'resolved' });
@@ -24,3 +24,4 @@ exports.getContactMetrics = async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch contact metrics' });
   }
 };
+export default { getBlogInsights, getContactMetrics };

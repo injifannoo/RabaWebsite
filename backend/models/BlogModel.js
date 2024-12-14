@@ -10,11 +10,8 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,  // Ensures content is provided
     },
-    conclusion: {
-      type: String,
-      required: true,  // Ensures content is provided
-    },
-    image: { type: String },
+
+    media: { type: String },
     tags: {
       type: String,
       required: true,  // Ensures author is specified
@@ -29,6 +26,11 @@ const blogSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,  // Default date to the current date and time
     },
+  scheduledDate: { type: Date },
+  isPublished: { type: Boolean, default: false },
+  views: { type: Number, default: 0 },
+  shares: { type: Number, default: 0 },
+  comments: [{ body: String, date: Date }],
   },
   { timestamps: true }  // Adds createdAt and updatedAt fields automatically
 );
