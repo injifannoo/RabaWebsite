@@ -1,11 +1,12 @@
 
 import Blog from "../models/BlogModel.js";
 
+
 // Get all blogs
 const getAllBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find();
-    res.status(200).json(blogs); // Return the list of blogs
+  res.status(200).json(blogs); // Return the list of blogs
   } catch (error) {
     console.error("Error fetching blogs:", error);
     res.status(500).json({ message: "Error fetching blogs." });

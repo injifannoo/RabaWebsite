@@ -23,7 +23,7 @@ const LatestBlogs = () => {
         <div className="line"></div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 px-4  mx-10">
-        {blogs.slice(0, 3).map((blog) => (
+        {blogs.map((blog) => (
           <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
