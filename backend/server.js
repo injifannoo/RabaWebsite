@@ -8,8 +8,15 @@ import blogRoutes from './routes/blogRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js'
 import cors from 'cors';
 import contactRoutes from './routes/contactRoutes.js';
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 const app = express();
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use(cors({
   origin: 'http://localhost:5173', // Add the frontend URL here
   methods: ['GET', 'POST', 'PUT', 'DELETE'],

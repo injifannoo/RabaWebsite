@@ -11,7 +11,7 @@ const blogSchema = new mongoose.Schema(
       required: true,  // Ensures content is provided
     },
 
-    media: { type: String },
+    media: { type: String }, // Field for image path
     tags: {
       type: String,
       required: true,  // Ensures author is specified

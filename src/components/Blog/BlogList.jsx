@@ -61,6 +61,7 @@ const BlogList = () => {
             {blogs.length > 0 ? (
               blogs.map(blog => (
                 <div key={blog._id} className="bg-white rounded-lg shadow-md p-6">
+                  <img src={blog.media} alt="Blog Media" className="w-full h-auto" />
                   <h2 className="text-xl font-semibold text-gray-800">{blog.title}</h2>
                   <p className="text-gray-600 mt-2">{blog.content}</p> 
                   <p className="text-gray-600 mt-2">Media: <a href={blog.media} target="_blank" rel="noopener noreferrer">{blog.media}</a> </p>

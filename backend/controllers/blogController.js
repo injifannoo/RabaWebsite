@@ -12,25 +12,24 @@ const getAllBlogs = async (req, res) => {
     res.status(500).json({ message: "Error fetching blogs." });
   }
 };
-
-// Create a new blog
 const createBlog = async (req, res) => {
   try {
     const { title, content, conclusion, tags, author } = req.body;
 
-    // Validate that all required fields are provided
     if (!title || !content || !author || !tags) {
       return res
         .status(400)
         .json({ message: "Title, content, tags, and author are required" });
     }
 
-    const newBlog = new Blog({ title, content, conclusion, tags, author });
+    const mediaUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
-    await newBlog.save(); // Save the blog to the database
+    const newBlog = new Blog({ title, content, conclusion, tags, author, media: mediaUrl });
+
+    await newBlog.save();
     res.status(201).json({
       message: "Blog created successfully!",
-      blog: newBlog, // Return the created blog for feedback
+      blog: newBlog,
     });
   } catch (error) {
     console.error("Error creating blog:", error);
@@ -38,23 +37,96 @@ const createBlog = async (req, res) => {
   }
 };
 
-// Update a blog
+
+// Update Blog
 const updateBlog = async (req, res) => {
   try {
-    const updatedBlog = await Blog.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
+    const { id } = req.params; // Get blog ID from the request params
+    const { title, content, conclusion, tags, author, status, scheduledDate, isPublished } = req.body;
+
+    if (!title || !content || !author || !tags) {
+      return res
+        .status(400)
+        .json({ message: "Title, content, tags, and author are required" });
+    }
+
+    const mediaUrl = req.file ? `backend/uploads/${req.file.filename}` : null;
+
+    const updatedFields = {
+      title,
+      content,
+      conclusion,
+      media,
+      tags,
+      author,
+      status,
+      scheduledDate,
+      isPublished,
+    };
+
+    if (mediaUrl) {
+      updatedFields.media = mediaUrl;
+    }
+
+    const updatedBlog = await Blog.findByIdAndUpdate(id, updatedFields, { new: true });
+
     if (!updatedBlog) {
       return res.status(404).json({ message: "Blog not found" });
     }
-    res.status(200).json(updatedBlog);
+
+    res.status(200).json({
+      message: "Blog updated successfully!",
+      blog: updatedBlog,
+    });
   } catch (error) {
     console.error("Error updating blog:", error);
-    res.status(500).json({ error: "Failed to update blog" });
+    res.status(500).json({ message: "Error updating blog", error: error.message });
   }
 };
+
+
+// Create a new blog
+// const createBlog = async (req, res) => {
+//   try {
+//     const { title, content, conclusion, tags, author } = req.body;
+
+//     // Validate that all required fields are provided
+//     if (!title || !content || !author || !tags) {
+//       return res
+//         .status(400)
+//         .json({ message: "Title, content, tags, and author are required" });
+//     }
+
+//     const newBlog = new Blog({ title, content, conclusion, tags, author });
+
+//     await newBlog.save(); // Save the blog to the database
+//     res.status(201).json({
+//       message: "Blog created successfully!",
+//       blog: newBlog, // Return the created blog for feedback
+//     });
+//   } catch (error) {
+//     console.error("Error creating blog:", error);
+//     res.status(500).json({ message: "Error creating blog", error: error.message });
+//   }
+// };
+
+// // Update a blog
+// const updateBlog = async (req, res) => {
+//   try {
+//     const updatedBlog = await Blog.findByIdAndUpdate(
+//       req.params.id,
+//       req.body,
+//       { new: true }
+//     );
+//     if (!updatedBlog) {
+//       return res.status(404).json({ message: "Blog not found" });
+//     }
+//     res.status(200).json(updatedBlog);
+//   } catch (error) {
+//     console.error("Error updating blog:", error);
+//     res.status(500).json({ error: "Failed to update blog" });
+//   }
+// };
 
 // Delete a blog
 const deleteBlog = async (req, res) => {
