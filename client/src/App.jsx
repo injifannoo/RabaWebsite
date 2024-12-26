@@ -73,7 +73,7 @@ const App = () => {
       {/* App Routes */}
       <AppRoutes />
       {/* Footer */}
-<Footer/>
+      <Footer/>
       {/* <footer className="bg-gray-800 text-white text-center p-4 mt-auto -mb-10">
         &copy; {new Date().getFullYear()} Raba Technologies. All rights reserved.
       </footer> */}

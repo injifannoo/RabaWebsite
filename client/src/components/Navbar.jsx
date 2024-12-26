@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-neutral-600 text-white shadow-lg" : "bg-transparent text-white"
+        isScrolled ? "bg-gray-200 text-blue shadow-lg" : "bg-transparent text-white"
       }`}
     >
       <div className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8">
@@ -48,7 +48,7 @@ const Navbar = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

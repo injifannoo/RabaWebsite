@@ -19,7 +19,7 @@ import EditBlog from "./components/Blog/BlogEditor.jsx"
 import Dashboard from "./pages/admin/AdminDashboard";
 const SinglePageLayout = () => {
   return (
-    <div className="bg-gray-100 flex-grow">
+    <div className="bg--100 flex flex-col  flex-grow">
       {/* Home Section */}
       <section
         id="home"
@@ -30,29 +30,29 @@ const SinglePageLayout = () => {
       </section>
 
       {/* About Us Section */}
-      <section id="about-us" className="flex justify-center items-center px-1 py-8">
+      <section id="about-us" className="flex justify-center items-center px-1 pt-8 md:py-8">
         <AboutUs />
       </section>
 
       {/* Services Section */}
-      <section id="services" className="flex justify-center items-center px-1 py-8">
+      <section id="services" className="flex justify-center items-center px-1 md:py-8">
         <Services />
       </section>
 
       {/* Our Project Section */}
       <section
         id="our-project"
-        className="min-h-screen flex justify-center items-center px-1 py-8"
+        className="min-h-scren flex justify-center items-center px-1 md:py-8"
       >
         <OurProject />
       </section>
 
       {/* Blogs Section */}
-      <section id="blogs" className="min-h-screen flex justify-center items-center px-1 py-8">
+      <section id="blogs" className="min-h-screen flex justify-center items-center px-1 py-">
         <Blogs />
       </section>
 
-      <section id="teams" className="min-h-screen flex justify-center items-center px-1 py-8">
+      <section id="teams" className="min-h-scren flex justify-center items-center px-1 md:py-8 ">
 
              <TeamSection />
         </section>
@@ -61,14 +61,14 @@ const SinglePageLayout = () => {
 <LearnMore />
 </section> */}
 
-        <section id="testimonials" className=" min-h-screen flex justify-center items-center px-1 py-8">
+        {/* <section id="testimonials" className=" min-h-screen flex justify-center items-center px-1 py-">
           <Testimonials />
-       </section>
+       </section> */}
 
       {/* Contact Section */}
       <section
         id="contact"
-        className="min-h-screen flex justify-center items-center px-1 py-8"
+        className="max-h-scren flex justify-center items-center px-1 md:py-20"
       >
         <ContactForm />
       </section>
