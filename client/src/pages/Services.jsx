@@ -4,32 +4,32 @@ import React from "react";
 const services = [
     {
         title:"Website Development",
-        imageUrl:"public/images/service-img/web.svg",
+        imageUrl:"client/public/images/service-img/web.svg",
         description: "Building high-quality, responsive websites tailored to meet client requirements"
     },
     {
         title:"Mobile Development",
-        imageUrl:"public/images/service-img/mobile.svg",
+        imageUrl:"client/public/images/service-img/mobile.svg",
         description: " Creating innovative and user-friendly mobile applications for iOS and Android platforms"
     },
     {
         title:"Continous Maintenance",
-        imageUrl:"public/images/service-img/maintenance.svg",
+        imageUrl:"client/public/images/service-img/maintenance.svg",
         description: "Providing ongoing support and maintenance services for websites and applications."
     },
     {
         title:"Backend Development",
-        imageUrl:"public/images/service-img/backend-dev.svg",
+        imageUrl:"client/public/images/service-img/backend-dev.svg",
         description: "Building robust backend APIs to facilitate seamless data exchange between applications."
     },
     {
         title:"Graphics Design",
-        imageUrl:"public/images/service-img/graphics-design.svg",
+        imageUrl:"client/public/images/service-img/graphics-design.svg",
         description: "Offering visually appealing and engaging graphic design services."
     },
     {
         title:"UI/UX Design",
-        imageUrl:"public/images/service-img/ui-ux-design.svg",
+        imageUrl:"client/public/images/service-img/ui-ux-design.svg",
         description: "creating visually stunning interfaces and seamless user experiences."
     },
 ]

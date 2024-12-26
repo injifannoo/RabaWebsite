@@ -70,24 +70,25 @@ To run this project locally, ensure you have:
 
 ## Project Structure  
 ```  
-RabaWebsite/  
-├── public/            # Contains the static HTML file and favicon. 
-├── src/
-│   ├── assets/        # For images, fonts, and other static files.
-│   ├── components/    # Reusable React components  
-      ├── Blog
-      ├── Message
-│   ├── pages/         # Main pages of the website  
-      ├── admin
-            ├── Blogs
-            ├── Messages
-│   ├── styles/        # CSS or styling solutions
-│   ├── hooks/         # Custom hooks for managing state and effects.
-│   ├── context/       # Context API files for global state management.
-│   ├── utils/         # Utility functions and helpers  
-│   └── App.jsx        # Main application component 
-│   └── main.jsx       # Entry point for React 
-│   └── routes.jsx     # Application routes (if using React Router)
+RabaWebsite/ 
+├── client/
+   ├── public/            # Contains the static HTML file and favicon. 
+   ├── src/
+   │   ├── assets/        # For images, fonts, and other static files.
+   │   ├── components/    # Reusable React components  
+         ├── Blog
+         ├── Message
+   │   ├── pages/         # Main pages of the website  
+         ├── admin
+               ├── Blogs
+               ├── Messages
+   │   ├── styles/        # CSS or styling solutions
+   │   ├── hooks/         # Custom hooks for managing state and effects.
+   │   ├── context/       # Context API files for global state management.
+   │   ├── utils/         # Utility functions and helpers  
+   │   └── App.jsx        # Main application component 
+   │   └── main.jsx       # Entry point for React 
+   │   └── routes.jsx     # Application routes (if using React Router)
 ├── Backend/            # New backend folder for Node.js server
 │   ├── models/        # MongoDB schema definitions
 │   ├── routes/        # API routes
