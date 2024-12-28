@@ -21,6 +21,8 @@ import Ebba from "./pages/about/Team/Ebba.jsx";
 import Enjifano from "./pages/about/Team/Enjifano.jsx";
 import Gizachew from "./pages/about/Team/Gizachew.jsx";
 import Naol from "./pages/about/Team/Naol.jsx";
+import AllBlogPage from "./pages/AllBlogPage.jsx";
+
 const SinglePageLayout = () => {
   return (
     <div className="bg--100 flex flex-col  flex-grow">
@@ -104,8 +106,7 @@ const AppRoutes = () => (
     <Route path="/team/enjifano" element={<Enjifano />} />
     <Route path="/team/gizachew" element={<Gizachew />} />
     <Route path="/team/naol" element={<Naol />} />
-
-
+    <Route path="/all-blogs" element={<AllBlogPage />} />
 
 
     {/* Protected Admin Route */}
