@@ -154,4 +154,5 @@ const TeamSection = () => {
   );
 };
 
+
 export default TeamSection;

@@ -14,7 +14,7 @@ const Enjifano = () => {
             <div className="max-w-[1200px] m-auto px-6 py-10 mt-20">
                 <div className="flex flex-col md:flex-row items-center md:items-start">
 
-                    <div className="md:w-1/3 flex flex-col items-center md:items-start sticky top-0">
+                    <div className="md:w-1/3 flex flex-col items-center md:items-start sticky top-20">
                         {/* Profile Picture Section */}
                         <div className="flex justify-center md:justify-start mb-6 md:mb-0">
                             <img
@@ -47,7 +47,7 @@ const Enjifano = () => {
                     </div>
 
                     {/* Profile Details Section */}
-                    <div className="md:w-2/3 md:pl-8 overflow-y-auto max-h-screen">
+                    <div className="md:w-2/3 md:pl-8 overflow-y-hidden max-h-screen">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                             Co-Founder & Software Developer
                         </h2>

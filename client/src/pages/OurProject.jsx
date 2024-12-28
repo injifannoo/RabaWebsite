@@ -5,13 +5,13 @@ import { motion, useAnimation } from "framer-motion";
 const projects = [
     {
         title:"Jupiter Tech Website",
-        imageUrl:"client/src/assets/images/project_images/jupiter_tech.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+        imageUrl:"client/src/assets/images/project_images/jupiter.png", 
+        description: "The website for Jupiter Tech includes a student registration system and an admin panel. It allows students to register for courses and access relevant information, while the admin panel enables administrators to track registrations, and perform other administrative tasks effectively.",
     },
     {
-        title:"Project 2",
-        imageUrl:"client/src/assets/images/projectImage.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+        title:"Job Board",
+        imageUrl:"client/src/assets/images/project_images/job_board.png", 
+        description: "The job board web app connects job seekers with employers through profile creation and job applications. It allows employers to post job openings and manage candidates, while providing advanced search filters and personalized job recommendations for users.",
     },
     {
         title:"Project 3",
@@ -80,7 +80,7 @@ const Projects = () => {
                 <h2 className="text-center text-xl md:text-3xl font-bold text-blue-700 mb-3">Our projects</h2>
                 <hr className="w-24 h-1 bg-blue-500 border-0 rounded " />
             </div>
-            <TransitionGroup className="grid grid-cols-2 md:grid-cols-3 max-w-[1200px] gap-5 md:gap-14 m-auto px-3 my-10 "> 
+            <TransitionGroup className="grid grid-cols- md:grid-cols-3 max-w-[1200px] gap-5 md:gap-14 m-auto px-3 my-5 "> 
                 {projects.map((project, indx) => (
                     <CSSTransition
                         key={indx}
@@ -94,17 +94,17 @@ const Projects = () => {
                             animate={controls}
                             whileHover={{ scale: 1.1 }}
                         >
-                            <div className="w-full h-full hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-2">
+                            <div className="w-full h-full hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-">
                                 <img
-                                    width={200}
-                                    height={150}
+                                className=" h-full w-full object-cover rounded-lg"
+                                    
                                     src={project.imageUrl}
                                     alt={project.title}
                                 />
                             </div>
-                            <div className="flex flex-col justify-center items-center p-2 md:p-5 md:mb-5">
-                                <h1 className="text-lg md:text-2xl mb-3 text-blue-700">{project.title}</h1>
-                                <p className="text-xs md:text-sm text-center">{project.description}</p>
+                            <div className="flex flex-col justify-center items-cente p- md:p-2 ">
+                                <h1 className="text-lg md:text-xl mb-1 md:mb-3 text-blue-700">{project.title}</h1>
+                                <p className="text-sm text-justify text-gray-700">{project.description}</p>
                             </div>
                         </motion.div>
                     </CSSTransition>
