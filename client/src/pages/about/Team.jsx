@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import itu from '../../assets/images/profile/itub.jpg';
+import { Link } from "react-router-dom";
 
 const teamMembers = [
   {
@@ -19,20 +20,20 @@ const teamMembers = [
     linkedin: "#",
     profileLink: "/team/ebba",
   },
-  
-    {
-      id: 2,
-      name: "Enjifano Tamiru Urgessa",
-      role: "Co-Founder & Software Developer",
-      image: "https://via.placeholder.com/150", // Replace with actual image
-      description:
-        "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
-      fullDescription:
-        "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
-      github: "#",
-      linkedin: "#",
-      profileLink: "/team/enjifano",
-    },
+
+  {
+    id: 2,
+    name: "Enjifano Tamiru Urgessa",
+    role: "Co-Founder & Software Developer",
+    image: itu, // Replace with actual image
+    description:
+      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+    fullDescription:
+      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
+    github: "https://github.com/injifannoo",
+    linkedin: "https://linkedin.com/in/injifanotamiru",
+    profileLink: "/team/enjifano",
+  },
   {
     id: 3,
     name: "Gizachew Haptamariam",
@@ -120,6 +121,12 @@ const TeamSection = () => {
                 <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
                 <p className="text-sm text-indigo-500 mb-3">{member.role}</p>
                 <p className="text-sm text-gray-600">{member.description}</p>
+                <Link
+                  to={member.profileLink}
+                  className="mt-4 text-blue-600 hover:text-blue-800 text-sm font-medium transition duration-200"
+                >
+                  Read More
+                </Link>
                 <div className="flex justify-center space-x-6 mt-6">
                   <a
                     href={member.github}
