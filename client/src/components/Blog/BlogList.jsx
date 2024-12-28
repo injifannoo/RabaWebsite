@@ -22,21 +22,21 @@ const BlogList = () => {
     const confirmDelete = window.confirm("Are you sure you want to delete this blog?");
     if (confirmDelete) {
       const token = localStorage.getItem('adminToken');
-      console.log('The token is:',token);
+      console.log('The token is:', token);
       if (!token) {
         alert('You are not logged in!');
         // Optionally redirect the user to the login page
         // window.location.href = '/admin';
         return;
       }
-  
+
       try {
         await axios.delete(`http://localhost:3000/api/blogs/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in the Authorization header
           },
         });
-  
+
         // Remove the blog from the state after successful deletion
         setBlogs(prevBlogs => prevBlogs.filter(blog => blog._id !== id));
       } catch (error) {
@@ -45,12 +45,25 @@ const BlogList = () => {
       }
     }
   };
-  
+
   const handleEdit = (id) => {
     // Redirect to an edit page with the blog ID
     navigate(`/edit-blog/${id}`);
   };
 
+  const renderTags = (tags) => {
+    return tags
+      .split(',') // Split by commas
+      .map((tag, index) => (
+        <a
+          key={index}
+          href={`/tags/${tag.trim()}`} // Trim spaces for clean URLs
+          className="text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out ml-2"
+        >
+          {tag.trim()}
+        </a>
+      ));
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -63,10 +76,18 @@ const BlogList = () => {
                 <div key={blog._id} className="bg-white rounded-lg shadow-md p-6">
                   <img src={blog.media} alt="Blog Media" className="w-full h-auto" />
                   <h2 className="text-xl font-semibold text-gray-800">{blog.title}</h2>
-                  <p className="text-gray-600 mt-2">{blog.content}</p> 
+                  <div
+                    className="text-gray-700 text-lg mb-4"
+                    dangerouslySetInnerHTML={{ __html: blog.content }}
+                  />
                   <p className="text-gray-600 mt-2">Media: <a href={blog.media} target="_blank" rel="noopener noreferrer">{blog.media}</a> </p>
-                  <p className="text-gray-600 mt-2">Tags: {blog.tags}</p>
-                  <p className="text-gray-600 mt-2"> Author: {blog.author}</p>
+                  {/* Display Tags */}
+                  {blog.tags && blog.tags.length > 0 && (
+                    <div className="mt-2">
+                      <span className="font-semibold text-gray-700"> </span>
+                      {renderTags(blog.tags)}
+                    </div>
+                  )}                  <p className="text-gray-600 mt-2"> Author: {blog.author}</p>
                   <p className="text-gray-600 mt-2"> Status: {blog.status}</p>
                   <p className="text-gray-600 mt-2"> Created At: {blog.createdAt}</p>
                   <p className="text-gray-600 mt-2">Scheduled at: {blog.scheduledDate}</p>
@@ -80,7 +101,7 @@ const BlogList = () => {
                       Edit
                     </button>
                     <button
-                      onClick={() => handleDelete(blog._id)} 
+                      onClick={() => handleDelete(blog._id)}
                       className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300"
                     >
                       Delete

@@ -11,7 +11,20 @@ const BlogCard = ({ blog }) => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-
+ // Function to split tags by commas (or spaces) and remove extra spaces
+ const renderTags = (tags) => {
+  return tags
+    .split(',') // Split by commas
+    .map((tag, index) => (
+      <a
+        key={index}
+        href={`/tags/${tag.trim()}`} // Trim spaces for clean URLs
+        className="text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out ml-2"
+      >
+        {tag.trim()}
+      </a>
+    ));
+};
   return (
     <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
       {blog.media && (
@@ -31,9 +44,17 @@ const BlogCard = ({ blog }) => {
           </div>
         </div>
         <h3 className="text-xl font-semibold mb-4">{blog.title}</h3>
-        <p className="text-gray-700 text-justify">
-          {blog.content.slice(0, 150)}...
-        </p>
+        <div
+          className="text-gray-700 text-lg mb-4"
+          dangerouslySetInnerHTML={{ __html: blog.content.slice(0, 150) + '...' }}
+        />
+ {/* Display Tags */}
+ {blog.tags && blog.tags.length > 0 && (
+          <div className="mt-2">
+            <span className="font-semibold text-gray-700"> </span>
+            {renderTags(blog.tags)}
+          </div>
+        )}
 
         <div className="flex items-center justify-between mt-6">
           <button
@@ -71,7 +92,17 @@ const BlogCard = ({ blog }) => {
             )}
 
             <h2 className="text-3xl font-semibold text-gray-800 mb-6">{blog.title}</h2>
-            <p className="text-gray-700 text-lg mb-4">{blog.content}</p>
+            <div
+              className="text-gray-700 text-lg mb-4"
+              dangerouslySetInnerHTML={{ __html: blog.content }}
+            />
+ {/* Display Tags */}
+        {blog.tags && blog.tags.length > 0 && (
+          <div className="mt-2">
+            <span className="font-semibold text-gray-700"> </span>
+            {renderTags(blog.tags)}
+          </div>
+        )}
           </div>
         </div>
       )}

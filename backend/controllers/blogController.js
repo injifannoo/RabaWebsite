@@ -12,6 +12,25 @@ const getAllBlogs = async (req, res) => {
     res.status(500).json({ message: "Error fetching blogs." });
   }
 };
+// Get a single blog by ID
+const getBlogById = async (req, res) => {
+  try {
+    const { id } = req.params; // Get the blog ID from the request params
+console.log('id if the blog:',id);
+    // Find the blog by its ID
+    const blog = await Blog.findById(id);
+
+    if (!blog) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+
+    res.status(200).json(blog);
+  } catch (error) {
+    console.error("Error fetching blog:", error);
+    res.status(500).json({ message: "Error fetching blog" });
+  }
+};
+
 const createBlog = async (req, res) => {
   try {
     const { title, content, conclusion, tags, author } = req.body;
@@ -22,7 +41,7 @@ const createBlog = async (req, res) => {
         .json({ message: "Title, content, tags, and author are required" });
     }
 
-    const mediaUrl = req.file ? `/uploads/${req.file.filename}` : null;
+    const mediaUrl = req.file ? `backend/uploads/${req.file.filename}` : null;
 
     const newBlog = new Blog({ title, content, conclusion, tags, author, media: mediaUrl });
 
@@ -42,7 +61,7 @@ const createBlog = async (req, res) => {
 const updateBlog = async (req, res) => {
   try {
     const { id } = req.params; // Get blog ID from the request params
-    const { title, content, conclusion, tags, author, status, scheduledDate, isPublished } = req.body;
+    const { title, content, conclusion, media,tags, author, status, scheduledDate, isPublished } = req.body;
 
     if (!title || !content || !author || !tags) {
       return res
@@ -142,4 +161,4 @@ const deleteBlog = async (req, res) => {
   }
 };
 
-export default { getAllBlogs, createBlog, updateBlog, deleteBlog };
+export default { getAllBlogs,getBlogById, createBlog, updateBlog, deleteBlog };
