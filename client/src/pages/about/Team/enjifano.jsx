@@ -12,9 +12,10 @@ const Enjifano = () => {
     return (
         <div className="bg-white w-full text-secondary font-custom min-h-screen">
             <div className="max-w-[1200px] m-auto px-6 py-10 mt-20">
-                <div className="flex flex-col md:flex-row items-center md:items-start">
+                <div className="flex flex-col md:flex-row items-start">
 
-                    <div className="md:w-1/3 flex flex-col items-center md:items-start sticky top-0">
+                    {/* Sticky Section */}
+                    <div className="md:w-1/3 flex flex-col items-center md:items-start sticky top-0 self-start">
                         {/* Profile Picture Section */}
                         <div className="flex justify-center md:justify-start mb-6 md:mb-0">
                             <img
@@ -24,31 +25,29 @@ const Enjifano = () => {
                             />
                         </div>
                         <h1 className="text-3xl font-bold text-black mb-2">Enjifano Tamiru Urgessa</h1>
-                        <div className=" text-3xl flex flex-row items-center size-20 mt-2 space-x-4">
+                        <div className="text-3xl flex flex-row items-center size-20 mt-2 space-x-4">
                             <a
                                 href="https://github.com/injifannoo"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-gray-800 text-3xl"
+                                className="text-gray-500 hover:text-gray-800"
                             >
                                 <FontAwesomeIcon icon={faGithub} />
-
                             </a>
                             <a
                                 href="https://linkedin.com/in/injifanotamiru"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-500 hover:text-blue-700 text-3xl"
+                                className="text-blue-500 hover:text-blue-700"
                             >
                                 <FontAwesomeIcon icon={faLinkedin} />
-
                             </a>
                         </div>
                     </div>
 
-                    {/* Profile Details Section */}
+                    {/* Scrollable Content Section */}
                     <div className="bg-gray-100 md:w-2/3 md:pl-8 overflow-y-scroll max-h-screen scrollbar-hide">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                             Co-Founder & Software Developer
                         </h2>
                         <p className="mt-4 text-lg text-gray-600">
@@ -57,7 +56,7 @@ const Enjifano = () => {
                             His deep understanding of modern web and mobile technologies allows him to design and
                             implement innovative, user-centric solutions tailored to meet business needs.
                         </p>
-                        <p className="mt-4 text-gray-600">
+                        <p className="mt-4 text-gray-600 ml-2">
                             With a passion for solving real-world problems through technology, Enjifano brings
                             exceptional technical skills, leadership, and a commitment to excellence. He is
                             instrumental in driving the company's technical strategy, ensuring high-quality
@@ -87,19 +86,18 @@ const Enjifano = () => {
                                 needs.
                             </li>
                         </ul>
-                        {/* Added Education Section */}
+
                         <h3 className="text-xl font-semibold text-black mt-6">Education:</h3>
                         <p className="mt-2 text-gray-600">
                             Graduated from Addis Ababa University in Computer Science.
                         </p>
+
                         <h3 className="text-xl font-semibold text-black mt-6">Personal Philosophy:</h3>
                         <p className="mt-2 text-gray-600 italic">
                             "Technology has the power to transform lives and bridge gaps in our world. I believe in
                             creating solutions that not only meet the needs of today but also pave the way for a
                             better future."
                         </p>
-
-
                     </div>
 
                 </div>

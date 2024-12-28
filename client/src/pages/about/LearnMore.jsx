@@ -3,6 +3,7 @@ import homeImag from '../../assets/images/homebg.png';
 import mv from '../../assets/images/mv.jpg';
 import homeImage from '../../assets/images/cover.jpg';
 import rabaS from '../../assets/images/rabaS.jpg';
+import { Link } from 'react-router-dom';
 
 
 const AboutUs = () => {
@@ -28,7 +29,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center">
             <img
-              src={rabaS} // Replace with your image URL
+              src={rabaS}
               alt="Our Team"
               className="w-full rounded-lg shadow-xl"
             />
@@ -36,6 +37,11 @@ const AboutUs = () => {
             <p className="mt-2 text-gray-200 text-center">
               Our dedicated team works tirelessly to provide cutting-edge solutions.
             </p>
+            <Link to="/teams">
+              <button className="mt-4 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none text-lg font-medium transition duration-200 ease-in-out px-6 py-3 rounded-full">
+                Learn More About Our Team
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col items-center">
@@ -50,7 +56,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="flex flex-col items-center">
             <img
