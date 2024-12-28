@@ -7,33 +7,56 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const teamMembers = [
   {
     id: 1,
-    name: "User One",
-    role: "Front-end Developer",
+    name: "Ebba Mekonnen Abdeta ",
+    role: "Co-Founder & Software Developer",
     image: "https://via.placeholder.com/150", // Replace with actual image
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+    fullDescription:
+      "Ebba Mekonnen Abdeta is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "#",
     linkedin: "#",
+    profileLink: "/team/ebba",
   },
-  {
-    id: 2,
-    name: "User Two",
-    role: "Backend Developer",
-    image: "https://via.placeholder.com/150",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    github: "#",
-    linkedin: "#",
-  },
+  
+    {
+      id: 2,
+      name: "Enjifano Tamiru Urgessa",
+      role: "Co-Founder & Software Developer",
+      image: "https://via.placeholder.com/150", // Replace with actual image
+      description:
+        "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+      fullDescription:
+        "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
+      github: "#",
+      linkedin: "#",
+      profileLink: "/team/enjifano",
+    },
   {
     id: 3,
-    name: "User Three",
-    role: "Mobile Developer",
-    image: "https://via.placeholder.com/150",
+    name: "Gizachew Haptamariam",
+    role: "Co-Founder & Software Developer",
+    image: "https://via.placeholder.com/150", // Replace with actual image
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+    fullDescription:
+      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "#",
     linkedin: "#",
+    profileLink: "/team/gizachew",
+  },
+  {
+    id: 4,
+    name: "Naol Kecha Geda",
+    role: "Co-Founder & Software Developer",
+    image: "https://via.placeholder.com/150", // Replace with actual image
+    description:
+      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+    fullDescription:
+      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
+    github: "#",
+    linkedin: "#",
+    profileLink: "/team/naol",
   },
 ];
 

@@ -205,6 +205,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // import styles
+
 
 const CreateBlog = () => {
   const [title, setTitle] = useState('');
@@ -301,7 +304,14 @@ const CreateBlog = () => {
             <label className="block text-gray-700 font-medium mb-2" htmlFor="content">
               Blog Content
             </label>
-            <textarea
+            <ReactQuill
+              value={content}
+              onChange={setContent}
+              className="w-full h-48 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Write your blog content here..."
+            />
+            {/* <textarea
+            
               id="content"
               value={content}
               onChange={(e) => setContent(e.target.value)}
@@ -309,7 +319,7 @@ const CreateBlog = () => {
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Write your blog content here..."
               required
-            ></textarea>
+            ></textarea> */}
           </div>
 
           {/* Media (File Upload) */}

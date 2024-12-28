@@ -8,7 +8,8 @@ const { authenticate, authorize } = authMiddleware;
 const router = express.Router();
 
 router.get("/", blogController.getAllBlogs); // No authenticate middleware here
-router.get("/:id", blogController.updateBlog); // No authenticate middleware here
+//router.get("/:id", blogController.updateBlog); // No authenticate middleware here
+router.get("/:id", blogController.getBlogById); // Use getBlogById to fetch the blog
 // Configure Multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
