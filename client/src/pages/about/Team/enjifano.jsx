@@ -1,23 +1,48 @@
 import React from "react";
 import itu from '../../../assets/images/profile/itub.jpg';
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Enjifano = () => {
     return (
         <div className="bg-white w-full text-secondary font-custom min-h-screen">
-            <div className="max-w-[1200px] m-auto px-6 py-10">
-                <h1 className="text-4xl font-bold text-black mb-6">Enjifano Tamiru Urgessa</h1>
+            <div className="max-w-[1200px] m-auto px-6 py-10 mt-20">
                 <div className="flex flex-col md:flex-row items-center md:items-start">
-                    {/* Profile Picture Section */}
-                    <div className="md:w-1/3 flex justify-center md:justify-start mb-6 md:mb-0">
-                        <img
-                            src={itu}
-                            alt="Enjifano Tamiru Urgessa"
-                            className="w-40 h-40 rounded-full border-4 border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                        />
+
+                    <div className="md:w-1/3 flex flex-col items-center md:items-start sticky top-0">
+                        {/* Profile Picture Section */}
+                        <div className="flex justify-center md:justify-start mb-6 md:mb-0">
+                            <img
+                                src={itu}
+                                alt="Enjifano Tamiru Urgessa"
+                                className="w-60 h-80 rounded-full border-4 border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                            />
+                        </div>
+                        <h1 className="text-3xl font-bold text-black mb-2">Enjifano Tamiru Urgessa</h1>
+                        <div className=" text-3xl flex flex-row items-center size-20 mt-2 space-x-4">
+                            <a
+                                href="https://github.com/injifannoo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-500 hover:text-gray-800 text-3xl"
+                            >
+                                <FontAwesomeIcon icon={faGithub} />
+
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/injifanotamiru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-500 hover:text-blue-700 text-3xl"
+                            >
+                                <FontAwesomeIcon icon={faLinkedin} />
+
+                            </a>
+                        </div>
                     </div>
 
                     {/* Profile Details Section */}
-                    <div className="md:w-2/3 md:pl-8">
+                    <div className="md:w-2/3 md:pl-8 overflow-y-auto max-h-screen">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                             Co-Founder & Software Developer
                         </h2>
@@ -69,25 +94,9 @@ const Enjifano = () => {
                             better future."
                         </p>
 
-                        <div className="mt-6 flex space-x-4">
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-gray-800 text-3xl"
-                            >
-                                GitHub
-                            </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-500 hover:text-blue-700 text-3xl"
-                            >
-                                LinkedIn
-                            </a>
-                        </div>
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>
