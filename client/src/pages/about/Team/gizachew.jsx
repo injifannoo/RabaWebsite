@@ -46,8 +46,8 @@ const Gizachew = () => {
                        </div>
    
                        {/* Profile Details Section */}
-                       <div className="md:w-2/3 md:pl-8 overflow-y-auto max-h-screen">
-                           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                       <div className="bg-gray-100 md:w-2/3 md:pl-8 overflow-y-scroll max-h-screen scrollbar-hide">
+                       <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                                Co-Founder & Software Developer
                            </h2>
                            <p className="mt-4 text-lg text-gray-600">

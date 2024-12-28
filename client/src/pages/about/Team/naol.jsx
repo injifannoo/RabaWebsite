@@ -9,7 +9,7 @@ const Naol = () => {
             window.scrollTo(0, 0);
           }, []);
     return (
-            <div className="bg-white w-full text-secondary font-custom min-h-screen">
+        <div className="bg-white w-full text-secondary font-custom min-h-screen">
                 <div className="max-w-[1200px] m-auto px-6 py-10 mt-20">
                     <div className="flex flex-col md:flex-row items-center md:items-start">
     
@@ -46,8 +46,8 @@ const Naol = () => {
                         </div>
     
                         {/* Profile Details Section */}
-                        <div className="md:w-2/3 md:pl-8 overflow-y-auto max-h-screen">
-                            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                        <div className="bg-gray-100 md:w-2/3 md:pl-8 overflow-y-scroll max-h-screen scrollbar-hide">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                                 Co-Founder & Software Developer
                             </h2>
                             <p className="mt-4 text-lg text-gray-600">
