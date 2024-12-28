@@ -115,7 +115,7 @@ const TeamSection = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-32 h-32 rounded-full border-4 border-white shadow-md mb-4"
+                className="w-60 h-60 rounded-full border-4 border-white shadow-md mb-4"
               />
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>

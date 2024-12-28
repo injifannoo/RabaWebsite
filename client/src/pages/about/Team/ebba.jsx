@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import itu from '../../../assets/images/profile/itub.jpg';
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Ebba = () => {
+     useEffect(() => {
+            // Scroll to the top of the page when the component is mounted
+            window.scrollTo(0, 0);
+          }, []);
     return (
             <div className="bg-white w-full text-secondary font-custom min-h-screen">
                 <div className="max-w-[1200px] m-auto px-6 py-10 mt-20">
