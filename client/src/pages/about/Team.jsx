@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { motion, useAnimation } from "framer-motion";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import itu from '../../assets/images/profile/itub.jpg';
 
 const teamMembers = [
   {
