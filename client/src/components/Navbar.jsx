@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./logo";
+import ft from '../assets/images/ft.jpg';
 import { isAdmin } from "../utils/auth";
 import { Navigate } from "react-router-dom"; // Import Navigate for route redirection
 
@@ -35,9 +36,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-200 text-blue shadow-lg" : "bg-transparent text-white"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-gray-200 text-blue shadow-lg" : "bg-transparent text-white"
+        }`}
     >
       <div className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8">
         <Logo />
@@ -71,7 +71,7 @@ const Navbar = () => {
               Home
             </a>
           </li>
-         
+
           <li>
             <a href="#about-us" className="hover:text-blue-300">
               About
@@ -95,6 +95,11 @@ const Navbar = () => {
           <li>
             <a href="#contact" className="hover:text-blue-300">
               Contact
+            </a>
+          </li>
+          <li>
+            <a href="https://ftsolution.net/" target="_blank" rel="noopener noreferrer" className="relative inline-block px-11 py-4 pt-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-full shadow-md hover:underline hover:text-blue-300">
+              <span className="absolute inset-0 bg-cover bg-center opacity-50 rounded-full" style={{ backgroundImage: `url(${ft})`, backgroundSize: 'contain' }}></span>
             </a>
           </li>
         </ul>
@@ -140,6 +145,11 @@ const Navbar = () => {
             <li>
               <a href="#contact" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Contact
+              </a>
+            </li>
+            <li>
+              <a href="https://ftsolution.net/" target="_blank" rel="noopener noreferrer" className="relative inline-block px-12 py-4 pt-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-full shadow-md hover:underline hover:text-blue-300">
+                <span className="absolute inset-0 bg-cover bg-center opacity-50 rounded-full" style={{ backgroundImage: `url(${ft})`, backgroundSize: 'contain' }}></span>
               </a>
             </li>
           </ul>
