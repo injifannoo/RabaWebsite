@@ -7,7 +7,7 @@ const Enjifano = () => {
     useEffect(() => {
         // Scroll to the top of the page when the component is mounted
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     return (
         <div className="bg-white w-full text-secondary font-custom min-h-screen">
@@ -99,9 +99,9 @@ const Enjifano = () => {
                             better future."
                         </p>
 
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
