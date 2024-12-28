@@ -4,8 +4,8 @@ import { motion, useAnimation } from "framer-motion";
 
 const projects = [
     {
-        title:"Project 1",
-        imageUrl:"client/src/assets/images/projectImage.png", 
+        title:"Jupiter Tech Website",
+        imageUrl:"client/src/assets/images/project_images/jupiter_tech.png", 
         description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
     },
     {
