@@ -7,6 +7,12 @@ import { Navigate } from "react-router-dom"; // Import Navigate for route redire
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu toggle
+  const [isAboutOpen, setIsAboutOpen] = useState(false); // State for about dropdown
+  const [isServicesOpen, setIsServiceOpen] = useState(false); // State for services dropdown
+  const [aboutTimeout, setAboutTimeout] = useState(null); // Timeout for about dropdown
+  const [serviceTimeout, setServiceTimeout] = useState(null); // Timeout for about dropdown
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +38,39 @@ const Navbar = () => {
   // Handle closing the menu when a link is clicked
   const handleMenuItemClick = () => {
     setIsMenuOpen(false);
+  };
+
+  // Handle mouse enter for about dropdown
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeout) {
+      clearTimeout(aboutTimeout);
+      setAboutTimeout(null);
+    }
+    setIsAboutOpen(true);
+  };
+
+  // Handle mouse leave for about dropdown
+  const handleAboutMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsAboutOpen(false);
+    }, 100); // Delay of 500ms
+    setAboutTimeout(timeout);
+  };
+
+  const handleServiceMouseEnter = () => {
+    if (serviceTimeout) {
+      clearTimeout(serviceTimeout);
+      setServiceTimeout(null);
+    }
+    setIsServiceOpen(true);
+  };
+
+  // Handle mouse leave for Servicet dropdown
+  const handleServiceMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsServiceOpen(false);
+    }, 100); // Delay of 500ms
+    setServiceTimeout(timeout);
   };
 
   return (
@@ -72,15 +111,79 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li>
+          {/* <li>
             <a href="#about-us" className="hover:text-blue-300">
               About
             </a>
+          </li> */}
+       
+       <li
+            className="relative"
+            onMouseEnter={handleAboutMouseEnter}
+            onMouseLeave={handleAboutMouseLeave}
+          >
+            <a href="#about-us" className="hover:text-blue-300">
+              About
+            </a>
+            {isAboutOpen && (
+              <ul
+                className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg"
+                onMouseEnter={handleAboutMouseEnter}
+                onMouseLeave={handleAboutMouseLeave}
+              >
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="/learn-more" className="block">Learn More</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="/teams" className="block">Our Team</a>
+                </li>
+              </ul>
+            )}
           </li>
-          <li>
+          {/* <li>
             <a href="#services" className="hover:text-blue-300">
               Services
             </a>
+          </li> */}
+          <li
+             className="relative"
+             onMouseEnter={handleServiceMouseEnter}
+             onMouseLeave={handleServiceMouseLeave}
+           >
+            <a href="#services" className="hover:text-blue-300">
+              Services
+            </a>
+            {isServicesOpen && (
+               <ul
+               className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg"
+               onMouseEnter={handleServiceMouseEnter}
+               onMouseLeave={handleServiceMouseLeave}
+             >
+              
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service1" className="block">Web development</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service2" className="block">Mobile app development</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service3" className="block">Digital Marketing</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service3" className="block">Continous Maintenance
+                  </a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service3" className="block">Graphics Design</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service3" className="block">Video Editing</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200">
+                  <a href="#service3" className="block">UI/UX Design</a>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <a href="#our-project" className="hover:text-blue-300">
@@ -160,3 +263,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

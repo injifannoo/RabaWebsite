@@ -18,7 +18,7 @@ const teamMembers = [
       "Ebba Mekonnen Abdeta is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "#",
     linkedin: "#",
-    profileLink: "/team/ebba",
+    profileLink: "/teams/ebba",
   },
 
   {
@@ -32,7 +32,7 @@ const teamMembers = [
       "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "https://github.com/injifannoo",
     linkedin: "https://linkedin.com/in/injifanotamiru",
-    profileLink: "/team/enjifano",
+    profileLink: "/teams/enjifano",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const teamMembers = [
       "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "#",
     linkedin: "#",
-    profileLink: "/team/gizachew",
+    profileLink: "/teams/gizachew",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const teamMembers = [
       "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "#",
     linkedin: "#",
-    profileLink: "/team/naol",
+    profileLink: "/teams/naol",
   },
 ];
 

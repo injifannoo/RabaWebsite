@@ -102,11 +102,13 @@ const AppRoutes = () => (
     <Route path="blog-list" element={<BlogList />} />
     <Route path="/create-blog" element={<CreateBlog />} />
     <Route path="/edit-blog/:id" element={<EditBlog />} />
-    <Route path="/team/ebba" element={<Ebba />} />
-    <Route path="/team/enjifano" element={<Enjifano />} />
-    <Route path="/team/gizachew" element={<Gizachew />} />
-    <Route path="/team/naol" element={<Naol />} />
+    <Route path="/teams/ebba" element={<Ebba />} />
+    <Route path="/teams/enjifano" element={<Enjifano />} />
+    <Route path="/teams/gizachew" element={<Gizachew />} />
+    <Route path="/teams/naol" element={<Naol />} />
     <Route path="/all-blogs" element={<AllBlogPage />} />
+    <Route path="/teams" element={<TeamSection />} />
+
 
 
     {/* Protected Admin Route */}
