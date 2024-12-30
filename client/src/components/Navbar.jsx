@@ -164,7 +164,7 @@ const Navbar = () => {
                   <a href="#service1" className="block">Web development</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service2" className="block">Mobile app development</a>
+                  <a href="#service2" className="block">Mobile development</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
                   <a href="#service3" className="block">Digital Marketing</a>
