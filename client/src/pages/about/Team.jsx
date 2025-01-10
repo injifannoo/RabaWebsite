@@ -40,11 +40,11 @@ const teamMembers = [
     role: "Co-Founder & Public Relations ",
     image: "https://via.placeholder.com/150", // Replace with actual image
     description:
-    "Experienced in Public Relations and communication strategies, enhancing brand visibility and client engagement.",
+    "Experienced in Graphic Design, Public Relations and communication strategies, enhancing brand visibility and client engagement.",
   fullDescription:
-    "Gizachew Haptamariam is a visionary co-founder specializing in Public Relations, brand communication, and relationship management. With a background in Political Science and International Relations, he brings a strategic approach to corporate positioning, stakeholder engagement, and organizational growth.",
+    "Gizachew Haptamariam is a visionary co-founder specializing in Graphic design, Public Relations, brand communication, and relationship management. With a background in Political Science and International Relations, he brings a strategic approach to corporate positioning, stakeholder engagement, and organizational growth.",
    github: "#",
-    linkedin: "https://linkedin.com/in/gizachewhabtamariam",
+    linkedin: "https://www.linkedin.com/in/gizachew-habtemariam-516645263/",
     profileLink: "/teams/gizachew",
   },
   {
