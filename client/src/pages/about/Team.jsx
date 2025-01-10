@@ -9,27 +9,27 @@ import { Link } from "react-router-dom";
 const teamMembers = [
   {
     id: 1,
-    name: "Ebba Mekonnen Abdeta ",
+    name: "Ebba Mekonnen ",
     role: "Co-Founder & Software Developer",
     image: "https://via.placeholder.com/150", // Replace with actual image
     description:
-      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+      "Specializing in Flutter and Java for mobile and desktop applications, and WordPress for web development",
     fullDescription:
-      "Ebba Mekonnen Abdeta is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
-    github: "#",
-    linkedin: "#",
+      "Ebba Mekonnen Abdeta is a passionate co-founder and software developer specializing in Flutter and Java for mobile and desktop applications, and WordPress for web development, Eba combines technical mastery with creativity to craft user-friendly and scalable solutions.",
+    github: "github.com/ebba",
+    linkedin: "https://www.linkedin.com/in/eba-mekonnen-88b4bb244/",
     profileLink: "/teams/ebba",
   },
 
   {
     id: 2,
-    name: "Enjifano Tamiru Urgessa",
+    name: "Enjifano Tamiru",
     role: "Co-Founder & Software Developer",
     image: itu, // Replace with actual image
     description:
-      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
+      "Specializes in Full stack web develpment & Flutter, delivering high-quality software solutions.",
     fullDescription:
-      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
+      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in Full stack web devlopment and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
     github: "https://github.com/injifannoo",
     linkedin: "https://linkedin.com/in/injifanotamiru",
     profileLink: "/teams/enjifano",
@@ -37,25 +37,25 @@ const teamMembers = [
   {
     id: 3,
     name: "Gizachew Haptamariam",
-    role: "Co-Founder & Software Developer",
+    role: "Co-Founder & Public Relations ",
     image: "https://via.placeholder.com/150", // Replace with actual image
     description:
-      "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
-    fullDescription:
-      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
-    github: "#",
-    linkedin: "#",
+    "Experienced in Public Relations and communication strategies, enhancing brand visibility and client engagement.",
+  fullDescription:
+    "Gizachew Haptamariam is a visionary co-founder specializing in Public Relations, brand communication, and relationship management. With a background in Political Science and International Relations, he brings a strategic approach to corporate positioning, stakeholder engagement, and organizational growth.",
+   github: "#",
+    linkedin: "https://linkedin.com/in/gizachewhabtamariam",
     profileLink: "/teams/gizachew",
   },
   {
     id: 4,
-    name: "Naol Kecha Geda",
+    name: "Naol Kecha",
     role: "Co-Founder & Software Developer",
     image: "https://via.placeholder.com/150", // Replace with actual image
     description:
       "Specializes in MERN stack & Flutter, delivering high-quality software solutions.",
     fullDescription:
-      "Enjifano Tamiru Urgessa is a passionate co-founder and software developer specializing in MERN stack and Flutter. With a focus on innovation, he drives technical strategies and builds scalable solutions for web and mobile platforms.",
+      "Naol Kecha Geda is a passionate co-founder and software developer specializing in MERN stack and Flutter.",
     github: "#",
     linkedin: "#",
     profileLink: "/teams/naol",
