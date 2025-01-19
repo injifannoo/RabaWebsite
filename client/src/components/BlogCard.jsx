@@ -76,14 +76,23 @@ const BlogCard = ({ blog }) => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="w-full h-fit hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-2">
-              {blog.media && (
+              {/* {blog.media && (
                 blog.media.endsWith(".mp4") ? (
                   <video controls src={blog.media} className="w-full h-[200px] object-cover mb-4"></video>
                 ) : (
                   <img src={blog.media} alt="Blog Media" className="w-full h-[200px] object-cover mb-4" />
                 )
-              )}
+              )} */}
+               {blog.media && (
+              blog.media.endsWith(".mp4") ? (
+                <video controls src={`http://localhost:3000/${blog.media}`} className="w-full h-[200px] object-cover mb-4"></video>
+              ) : (
+                <img src={`http://localhost:3000/${blog.media}`} alt="Blog Media" className="w-full h-[200px] object-cover mb-4" />
+              )
+            )}
             </div>
+           
+
 
             <div className="flex flex-col w-full justify-start items-start p-2 md:p-5 md:mb-5">
               <div className="grid grid-cols-2 gap-6 px-4 md-4">
