@@ -30,7 +30,6 @@ const BlogCard = ({ blog }) => {
         </a>
       ));
   };
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -91,6 +90,7 @@ const BlogCard = ({ blog }) => {
                 <div className="flex items-center text-sm text-gray-500 pb-4">
                   <CalendarIcon className="h-5 w-5 text-gray-400 mr-2" />
                   <p>{new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-4">{blog.title}</h3>

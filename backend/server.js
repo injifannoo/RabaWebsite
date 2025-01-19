@@ -27,8 +27,16 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-// Connect to MongoDB
-connectDB();
+// Connect to MySQL database
+(async () => {
+  try {
+    const connection = await connectDB(); // Await the promise-based connection
+    console.log('Connected to the MySQL database in server.js!');
+  } catch (err) {
+    console.error('Error connecting to the database:', err);
+    process.exit(1);  // Exit the app if connection fails
+  }
+})();
 
 // Middleware
 app.use(bodyParser.json());

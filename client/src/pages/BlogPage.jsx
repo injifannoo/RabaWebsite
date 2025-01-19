@@ -27,7 +27,7 @@ const LatestBlogs = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 md:px-4 md:mx-10">
         {blogs.slice(0, 3).map((blog) => (
-          <BlogCard key={blog._id} blog={blog} />
+          <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
       <div className="flex justify-center mt-10">

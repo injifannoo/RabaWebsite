@@ -79,7 +79,7 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (err) {
       console.error("Login failed:", err);
-      alert("Invalid credentials. Please try again.");
+      alert("Invalid credentials. Please try again in AUthContext.");
     }
   };
 

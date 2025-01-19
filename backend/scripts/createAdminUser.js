@@ -1,52 +1,63 @@
-require("dotenv").config();
-const dotenv = require("dotenv");
 
-const mongoose = require("mongoose");
-// const bcrypt = require("bcryptjs");
+import dotenv from 'dotenv';
+import mysql from 'mysql2/promise';
+import bcrypt from 'bcrypt';
 
-// User schema
-const userSchema = new mongoose.Schema({
-  email: String,
-  password: String,
-  role: String,
+dotenv.config();
+
+// Create a connection to MySQL
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'ITU', // Replace with your MySQL username
+  password: 'injifano@1234', // Replace with your MySQL password, or load it from .env
+  database: 'raba_website',
 });
-
-// User model
-const User = mongoose.model("User", userSchema);
 
 const createAdminUser = async () => {
   try {
-    const mongoUri = process.env.MONGO_URI;
-    console.log("Connecting to MongoDB at:", mongoUri);
-
-    await mongoose.connect(mongoUri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+    // Connect to the database
+    db.connect((err) => {
+      if (err) {
+        console.error('Error connecting to the database:', err);
+        return;
+      }
+      console.log('Connected to MySQL database');
     });
 
     // Check if an admin user already exists
-    const existingAdmin = await User.findOne({ email: "rabb@gmail.com" });
-    if (existingAdmin) {
-      console.log("Admin user already exists.");
-      return;
-    }
+    const query = 'SELECT * FROM users WHERE email = ?';
+    db.query(query, ['raba123@gmail.com'], async (err, results) => {
+      if (err) {
+        console.error('Error checking if admin exists:', err);
+        db.end();
+        return;
+      }
 
-    // Hash the password
-    // const hashedPassword = await bcrypt.hash("Raba@1", 10);
+      if (results.length > 0) {
+        console.log('Admin user already exists.');
+        db.end();
+        return;
+      }
 
-    // Create the admin user
-    const adminUser = new User({
-      email: "rabb@gmail.com",
-      password: "Raba@1",
-      role: "admin",
+      // Hash the password before saving it
+      const hashedPassword = await bcrypt.hash('Raba@123', 5);
+
+      // Insert the admin user if they don't exist
+      const insertQuery = `INSERT INTO users (email, password, role) 
+                           VALUES ('raba123@gmail.com', ?, 'admin')`;
+
+      db.query(insertQuery, [hashedPassword], (err, result) => {
+        if (err) {
+          console.error('Error creating admin user:', err);
+        } else {
+          console.log('Admin user created successfully:', result);
+        }
+        db.end(); // Close the connection after the query is finished
+      });
     });
-
-    const savedUser = await adminUser.save();
-    console.log("Admin user created successfully:", savedUser);
   } catch (error) {
-    console.error("Error creating admin user:", error);
-  } finally {
-    mongoose.connection.close();
+    console.error('Error creating admin user:', error);
+    db.end();
   }
 };
 
