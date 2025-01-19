@@ -74,13 +74,28 @@ const BlogList = () => {
             {blogs.length > 0 ? (
               blogs.map(blog => (
                 <div key={blog.id} className="bg-white rounded-lg shadow-md p-6">
-                  <img src={blog.media} alt="Blog Media" className="w-full h-auto" />
-                  <h2 className="text-xl font-semibold text-gray-800">{blog.title}</h2>
+       <div className="w-full h-fit hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-2">
+              {/* {blog.media && (
+                blog.media.endsWith(".mp4") ? (
+                  <video controls src={blog.media} className="w-full h-[200px] object-cover mb-4"></video>
+                ) : (
+                  <img src={blog.media} alt="Blog Media" className="w-full h-[200px] object-cover mb-4" />
+                )
+              )} */}
+               {blog.media && (
+              blog.media.endsWith(".mp4") ? (
+                <video controls src={`http://localhost:3000/${blog.media}`} className="w-full h-[200px] object-cover mb-4"></video>
+              ) : (
+                <img src={`http://localhost:3000/${blog.media}`} alt="Blog Media" className="w-full h-[200px] object-cover mb-4" />
+              )
+            )}
+            </div>                  <h2 className="text-xl font-semibold text-gray-800">{blog.title}</h2>
                   <div
                     className="text-gray-700 text-lg mb-4"
                     dangerouslySetInnerHTML={{ __html: blog.content }}
                   />
                   <p className="text-gray-600 mt-2">Media: <a href={blog.media} target="_blank" rel="noopener noreferrer">{blog.media}</a> </p>
+           
                   {/* Display Tags */}
                   {blog.tags && blog.tags.length > 0 && (
                     <div className="mt-2">

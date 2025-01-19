@@ -17,6 +17,13 @@ const EditBlog = () => {
   const [status, setStatus] = useState('draft');
   const [scheduledDate, setScheduledDate] = useState('');
   const [isPublished, setIsPublished] = useState(false);
+  const [mediaFile, setMediaFile] = useState(null); // Added for file handling
+
+
+  const handleFileChange = (e) => {
+    setMediaFile(e.target.files[0]);
+    console.log("Selected file:", e.target.files[0]);
+  };
 
   useEffect(() => {
     if (!id) {
@@ -34,7 +41,10 @@ const EditBlog = () => {
         }
 
         const response = await axios.get(`http://localhost:3000/api/blogs/${id}`, {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data', // Ensure this is set for file upload
+          },
         });
         console.log(`id:${id}`);
         console.log('API Response:', response.data);
@@ -47,7 +57,7 @@ const EditBlog = () => {
         }
 
         // If blog data exists, update the form fields
-        const { title, content, published, media, tags, author, status, scheduledDate } = blog;
+        const { title, content, published, media, tags, author, status, scheduledDate, mediaFile } = blog;
         setTitle(title);
         setContent(content);
         setIsPublished(published);
@@ -56,6 +66,8 @@ const EditBlog = () => {
         setAuthor(author || '');
         setStatus(status || 'draft');
         setScheduledDate(scheduledDate || '');
+        setMediaFile(mediaFile || null); // Set media file
+
       } catch (error) {
         console.error('Error fetching blog:', error.response?.data || error.message);
         alert(`Failed to fetch blog: ${error.response?.data?.message || 'Unknown error'}`);
@@ -66,35 +78,42 @@ const EditBlog = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitting blog with values:", { title, content, tags, author, media, status, scheduledDate, isPublished });
+    console.log("Submitting blog with values:", { title, content, tags, author, mediaFile, status, scheduledDate, isPublished });
     const token = localStorage.getItem('adminToken');
 
+    const formData = new FormData();
+
+    // Append the form fields
+    formData.append('title', title);
+    formData.append('content', content);
+    formData.append('tags', tags);
+    formData.append('author', author);
+    formData.append('status', status);
+    formData.append('scheduledDate', scheduledDate);
+    formData.append('isPublished', isPublished);
+    // Append the file if it's selected
+    if (mediaFile) {
+      formData.append('media', mediaFile);
+    }
     try {
+     
       await axios.put(
         `http://localhost:3000/api/blogs/${id}`,
-        {
-          title,
-          content,
-          media,
-          tags,
-          author,
-          status,
-          scheduledDate,
-          isPublished,
-        },
+        formData,
         {
           headers: {
             Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data',  // This header is important for file uploads
+
           },
         }
       );
-
-      alert('Blog updated successfully');
-      navigate('/dashboard'); // Navigate back to the dashboard
-    } catch (error) {
-      console.error('Error updating blog:', error);
-      alert('Error updating blog');
-    }
+    alert('Blog updated successfully');
+    navigate('/dashboard');
+  } catch (error) {
+    console.error('Error updating blog:', error);
+    alert('Error updating blog: ' + (error.response?.data?.message || 'Unknown error'));
+  }
   };
 
   return (
@@ -141,7 +160,7 @@ const EditBlog = () => {
             ></textarea> */}
           </div>
 
-          {/* Media */}
+          {/* Media
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-2" htmlFor="media">
               Media (Image/Video URL)
@@ -153,6 +172,19 @@ const EditBlog = () => {
               onChange={(e) => setMedia(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter media URL"
+            />
+          </div> */}
+          {/* Media (File Upload) */}
+          <div className="mb-4">
+            <label className="block text-gray-700 font-medium mb-2" htmlFor="media">
+              Media (Image/Video)
+            </label>
+            <input
+              type="file"
+              id="media"
+              accept="image/*,video/*"
+              onChange={handleFileChange}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none"
             />
           </div>
 
