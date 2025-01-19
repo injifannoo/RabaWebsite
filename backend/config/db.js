@@ -29,10 +29,10 @@ import mysql from 'mysql2/promise';
 const connectDB = async () => {
   try {
     const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'ITU', // Replace with your MySQL username
-      password: 'injifano@1234', // Replace with your MySQL password, or load it from .env
-      database: 'raba_website',
+      host: process.env.DB_HOST, // Replace with your MySQL hostname
+      user: process.env.DB_USER, // Replace with your MySQL username
+      password: process.env.DB_PASSWORD, // Replace with your MySQL password, or load it from .env
+      database: process.env.DB_NAME,
     });
 
     console.log('Connected to the MySQL database in db.js!');
