@@ -1,27 +1,34 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AboutUs from "./pages/AboutUs";
-import OurProject from "./pages/OurProject";
-import Services from "./pages/Services";
-import ContactForm from "./pages/ContactForm";
-import Blogs from "./pages/BlogPage";
+import HomePage from "./pages/HomePage.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import OurProject from "./pages/OurProject.jsx";
+import Services from "./pages/Services.jsx";
+import ContactForm from "./pages/ContactForm.jsx";
+import Blogs from "./pages/BlogPage.jsx";
 import ErrorPage from "./pages/ErroPage.jsx";
-import AdminLogin from './pages/admin/AdminLogin';
-import LoginPage from "./pages/LoginPage";
-import AdminDashboard from './pages/admin/AdminDashboard';
-import PrivateRoute from './components/PrivateRoute';
+import AdminLogin from './pages/admin/AdminLogin.jsx';
+import LoginPage from "./pages/LoginPage.jsx";
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import PrivateRoute from './components/PrivateRoute.jsx';
 import Testimonials from "./pages/Testimonials.jsx";
 import LearnMore from "./pages/About/LearnMore.jsx";
 import CreateBlog from "./components/Blog/createBlog.jsx";
 import BlogList from "./components/Blog/BlogList.jsx";
 import EditBlog from "./components/Blog/BlogEditor.jsx"
-import Dashboard from "./pages/admin/AdminDashboard";
-import TeamSection from "./pages/about/Team";
+import Dashboard from "./pages/admin/AdminDashboard.jsx";
+import TeamSection from "./pages/about/Team.jsx";
 import Ebba from "./pages/about/Team/Ebba.jsx";
 import Enjifano from "./pages/about/Team/Enjifano.jsx";
 import Gizachew from "./pages/about/Team/Gizachew.jsx";
 import Naol from "./pages/about/Team/Naol.jsx";
 import AllBlogPage from "./pages/AllBlogPage.jsx";
+import WebDevelopment from "./components/Services/webDevelopment.jsx";
+import AppDevelopment from "./components/Services/appDevelopment.jsx";
+import VideoEditing from "./components/Services/videoEditing.jsx";
+import DigitalMarketing from "./components/Services/digitalMarketing.jsx";
+import ContinousMaintenance from "./components/Services/continousMaintenance.jsx";
+import GraphicsDesign from "./components/Services/graphicsDesign.jsx";
+import UiUxDesign from "./components/Services/uiUxDesign.jsx";
 
 const SinglePageLayout = () => {
   return (
@@ -108,7 +115,13 @@ const AppRoutes = () => (
     <Route path="/teams/naol" element={<Naol />} />
     <Route path="/all-blogs" element={<AllBlogPage />} />
     <Route path="/teams" element={<TeamSection />} />
-
+    <Route path="/web-development" element={<WebDevelopment />} />
+    <Route path="/app-development" element={<AppDevelopment />} />
+    <Route path="/video-editing" element={<VideoEditing />} />
+    <Route path="/digital-marketing" element={<DigitalMarketing />} />
+    <Route path="/continous-maintenance" element={<ContinousMaintenance />} />
+    <Route path="/graphics-design" element={<GraphicsDesign />} />
+    <Route path="/ui-ux-design" element={<UiUxDesign />} />
 
 
     {/* Protected Admin Route */}

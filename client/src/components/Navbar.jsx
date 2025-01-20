@@ -3,7 +3,6 @@ import Logo from "./logo";
 import ft from '../assets/images/ft.jpg';
 import { isAdmin } from "../utils/auth";
 import { Navigate } from "react-router-dom"; // Import Navigate for route redirection
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu toggle
@@ -159,28 +158,27 @@ const Navbar = () => {
                onMouseEnter={handleServiceMouseEnter}
                onMouseLeave={handleServiceMouseLeave}
              >
-              
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service1" className="block">Web development</a>
+                  <a href="/web-development" className="block">Web development</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service2" className="block">Mobile development</a>
+                  <a href="/app-development" className="block">Mobile development</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service3" className="block">Digital Marketing</a>
+                  <a href="/digital-marketing" className="block">Digital Marketing</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service3" className="block">Continous Maintenance
+                  <a href="/continous-maintenance" className="block">Continous Maintenance
                   </a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service3" className="block">Graphics Design</a>
+                  <a href="/graphics-design" className="block">Graphics Design</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service3" className="block">Video Editing</a>
+                  <a href="/video-editing" className="block">Video Editing</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="#service3" className="block">UI/UX Design</a>
+                  <a href="/ui-ux-design" className="block">UI/UX Design</a>
                 </li>
               </ul>
             )}
