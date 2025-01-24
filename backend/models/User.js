@@ -19,7 +19,7 @@
 
 // MysQL
 
-import connectDB from '../config/db.js'; // MySQL connection
+import  connectDB from '../config/db.js'; // Import both named exports
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 

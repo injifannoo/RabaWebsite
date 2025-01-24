@@ -123,12 +123,15 @@
 
 // Import the MySQL connection
 import connectDB from '../config/db.js';
+import { sequelize } from '../config/db.js'; // Import sequelize instance
+import { QueryTypes }  from 'sequelize';
+
+
 
 // Get all blogs
 export const getAllBlogs = async (req, res) => {
   try {
-    const db = await connectDB();  // Await the database connection
-    const [rows] = await db.query('SELECT * FROM blogs');
+    const [rows] = await sequelize.query('SELECT * FROM blogs');
     res.status(200).json(rows);
   } catch (error) {
     console.error('Error fetching blogs:', error);
@@ -136,19 +139,40 @@ export const getAllBlogs = async (req, res) => {
   }
 };
 
-// Get blog by ID
-export const getBlogById = async (req, res) => {
-  const { id } = req.params;
+// // Get blog by ID
+// export const getBlogById = async (req, res) => {
+//   const { id } = req.params;
+//   try {
+//     const [rows] = await sequelize.query('SELECT * FROM blogs WHERE id = ?', [id]);
+//     if (rows.length === 0) {
+//       return res.status(404).json({ message: 'Blog not found.' });
+//     }
+//     res.status(200).json(rows[0]);
+//   } catch (error) {
+//     console.error('Error fetching blog:', error);
+//     res.status(500).json({ message: 'Error fetching blog.' });
+//   }
+// };
+const getBlogById = async (req, res) => {
   try {
-    const db = await connectDB();  // Await the database connection
-    const [rows] = await db.query('SELECT * FROM blogs WHERE id = ?', [id]);
-    if (rows.length === 0) {
-      return res.status(404).json({ message: 'Blog not found.' });
+    const blogId = req.params.id;
+
+    const blog = await sequelize.query(
+      'SELECT * FROM blogs WHERE id = :id',
+      {
+        replacements: { id: blogId },
+        type: QueryTypes.SELECT,
+      }
+    );
+
+    if (blog.length === 0) {
+      return res.status(404).json({ error: 'Blog not found' });
     }
-    res.status(200).json(rows[0]);
+
+    res.status(200).json(blog[0]);
   } catch (error) {
     console.error('Error fetching blog:', error);
-    res.status(500).json({ message: 'Error fetching blog.' });
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 };
 
@@ -158,8 +182,7 @@ export const createBlog = async (req, res) => {
   const media = req.file ? `uploads/${req.file.filename}` : null;
 
   try {
-    const db = await connectDB();  // Await the database connection
-    const [result] = await db.query(
+    const [result] = await sequelize.query(
       'INSERT INTO blogs (title, content, media, tags, author) VALUES (?, ?, ?, ?, ?)',
       [title, content, media, tags, author]
     );
@@ -194,8 +217,7 @@ export const updateBlog = async (req, res) => {
   const media = req.file ? `uploads/${req.file.filename}` : null;
 
   try {
-    const db = await connectDB();  // Await the database connection
-    const [result] = await db.query(
+    const [result] = await sequelize.query(
       'UPDATE blogs SET title = ?, content = ?, media = ?, tags = ?, author = ? WHERE id = ?',
       [title, content, media, tags, author, id]
     );
@@ -216,8 +238,7 @@ export const deleteBlog = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const db = await connectDB();  // Await the database connection
-    const [result] = await db.query('DELETE FROM blogs WHERE id = ?', [id]);
+    const [result] = await sequelize.query('DELETE FROM blogs WHERE id = ?', [id]);
 
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: 'Blog not found.' });
@@ -229,4 +250,4 @@ export const deleteBlog = async (req, res) => {
     res.status(500).json({ message: 'Error deleting blog.' });
   }
 };
-export default { getAllBlogs,getBlogById, createBlog, updateBlog, deleteBlog };
+export default { getAllBlogs, getBlogById, createBlog, updateBlog, deleteBlog };

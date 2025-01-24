@@ -1,4 +1,6 @@
-import * as jwtDecode from 'jwt-decode';
+// import * as jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
+
 export const isAdmin = () => {
   const token = localStorage.getItem('adminToken');
   if (!token) {

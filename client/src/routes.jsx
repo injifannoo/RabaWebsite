@@ -29,6 +29,7 @@ import DigitalMarketing from "./components/Services/digitalMarketing.jsx";
 import ContinousMaintenance from "./components/Services/continousMaintenance.jsx";
 import GraphicsDesign from "./components/Services/graphicsDesign.jsx";
 import UiUxDesign from "./components/Services/uiUxDesign.jsx";
+import BlogCardModal from "./components/BlogCardDetail.jsx";
 
 const SinglePageLayout = () => {
   return (
@@ -122,6 +123,7 @@ const AppRoutes = () => (
     <Route path="/continous-maintenance" element={<ContinousMaintenance />} />
     <Route path="/graphics-design" element={<GraphicsDesign />} />
     <Route path="/ui-ux-design" element={<UiUxDesign />} />
+    <Route path="/blog-detail/:id" element={<BlogCardModal />} />
 
 
     {/* Protected Admin Route */}
