@@ -1,7 +1,15 @@
 import React from 'react';
 import Navbar from '../Navbar'; // Adjust the path if necessary
+import { FaCheckCircle } from 'react-icons/fa'; // Importing an icon library
 
 const DigitalMarketing = () => {
+  const listItem = (text) => (
+    <div className="flex items-start mb-2">
+      <FaCheckCircle className="text-blue-500 mt-1 mr-2" />
+      <span>{text}</span>
+    </div>
+  );
+
   return (
     <>
       <Navbar />
@@ -14,65 +22,125 @@ const DigitalMarketing = () => {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ml-10">
-          <section className="bg-slate-100 mb-8 flex items-center justify-center">
-            <div className="text-gray-600 ml-4 grid-cols-2">
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Focus</h2>
-              <p className="text-gray-600">
-                Developing and executing targeted strategies to promote your brand, products, or services online, ensuring they reach the right audience through the most effective channels.
+        {/* Focus Section */}
+        <section className="bg-slate-100 text-gray-600 mb-12 ml-10">
+          <h2 className="text-2xl text-center font-semibold text-gray-800 mb-4">Focus</h2>
+          <p className="text-gray-600 text-center">
+            Developing and executing targeted strategies to promote your brand, products, or services online, ensuring they reach the right audience through the most effective channels.
+          </p>
+        </section>
+
+        {/* Involves Section */}
+        <h2 className="text-2xl text-center font-semibold text-gray-800 mb-10 mt-4">Involves</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 ml-10">
+          {/* Search Engine Optimization */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Search Engine Optimization (SEO)</h3>
+              <p className="text-gray-600 mb-2">
+                Optimizing your website content to improve its visibility on search engines and attract organic traffic.
               </p>
+              {listItem("Keyword Research and Analysis")}
+              {listItem("On-Page SEO")}
+              {listItem("Off-Page SEO and Link Building")}
+              {listItem("Technical SEO")}
             </div>
           </section>
 
-          <section className="bg-slate-100 mb-8 flex flex-col justify-center">
-            <div className="text-gray-600 ml-4">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Involves</h2>
-              <div className="mb-6">
-                <h3 className="text-xl font-medium text-gray-800">Search Engine Optimization (SEO)</h3>
-                <p className="text-gray-600">Optimizing your website content to improve its visibility on search engines and attract organic traffic.</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-xl font-medium text-gray-800">Social Media Marketing</h3>
-                <p className="text-gray-600">Building and managing your brand’s presence across social platforms like Facebook, Instagram, Twitter, and LinkedIn to engage with your audience and drive conversions.</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-xl font-medium text-gray-800">Content Marketing</h3>
-                <p className="text-gray-600">Creating valuable content that educates, entertains, and informs your audience, driving engagement and loyalty.</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-xl font-medium text-gray-800">Email Marketing</h3>
-                <p className="text-gray-600">Crafting personalized email campaigns that nurture leads and maintain strong relationships with your customers.</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-xl font-medium text-gray-800">Pay-Per-Click (PPC) Advertising</h3>
-                <p className="text-gray-600">Managing targeted paid ad campaigns on platforms like Google Ads to drive immediate traffic and leads.</p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-medium text-gray-800">Analytics and Reporting</h3>
-                <p className="text-gray-600">Continuously analyzing data to measure performance, optimize strategies, and ensure marketing goals are met.</p>
-              </div>
+          {/* Social Media Marketing */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Social Media Marketing</h3>
+              <p className="text-gray-600 mb-2">
+                Building and managing your brand’s presence across social platforms to engage with your audience and drive conversions.
+              </p>
+              {listItem("Social Media Strategy Development")}
+              {listItem("Content Creation and Scheduling")}
+              {listItem("Influencer Partnerships")}
+              {listItem("Social Media Ads Management")}
             </div>
           </section>
 
-          <section className="bg-slate-100 text-center mb-8 flex items-center justify-center">
-            <div className="grid-cols-2">
+          {/* Content Marketing */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Content Marketing</h3>
+              <p className="text-gray-600 mb-2">
+                Creating valuable content that educates, entertains, and informs your audience, driving engagement and loyalty.
+              </p>
+              {listItem("Blog Writing and Publishing")}
+              {listItem("Video Production")}
+              {listItem("Infographics and Visual Content")}
+              {listItem("Ebooks and Whitepapers")}
+            </div>
+          </section>
+
+          {/* Email Marketing */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Email Marketing</h3>
+              <p className="text-gray-600 mb-2">
+                Crafting personalized email campaigns to nurture leads and maintain strong customer relationships.
+              </p>
+              {listItem("Newsletter Design")}
+              {listItem("Automated Campaigns")}
+              {listItem("Lead Nurturing")}
+              {listItem("Email Analytics")}
+            </div>
+          </section>
+
+          {/* PPC Advertising */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Pay-Per-Click (PPC) Advertising</h3>
+              <p className="text-gray-600 mb-2">
+                Managing targeted paid ad campaigns on platforms like Google Ads to drive immediate traffic and leads.
+              </p>
+              {listItem("Google Ads")}
+              {listItem("Facebook Ads")}
+              {listItem("LinkedIn Ads")}
+              {listItem("Display and Retargeting Campaigns")}
+            </div>
+          </section>
+
+          {/* Analytics and Reporting */}
+          <section className="bg-slate-100 mb-12">
+            <div className="text-gray-600 mb-4 ml-4">
+              <h3 className="text-xl font-medium text-gray-800">Analytics and Reporting</h3>
+              <p className="text-gray-600 mb-2">
+                Continuously analyzing data to measure performance, optimize strategies, and ensure marketing goals are met.
+              </p>
+              {listItem("Website Traffic Analysis")}
+              {listItem("Conversion Rate Optimization")}
+              {listItem("Campaign Performance Reports")}
+            </div>
+          </section>
+
+
+        </div>
+        <section className="bg-slate-100 text-center mb-8 flex items-center justify-center">
+          <div className="grid-cols-2">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Creating Awareness about Digital Marketing</h3>
+            <p className="text-gray-600">
+              Educating businesses and individuals about the importance of digital marketing, helping them understand its impact, tools, and strategies to grow their online presence.
+            </p>
+          </div>
+        </section>
+        <section className="bg-slate-100 text-center mb-8 flex items-center justify-center">
+          <div className="grid-cols-2">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Goal</h2>
             <p className="text-lg text-gray-600 mb-4">
               Partner with us to create innovative digital marketing strategies that increase your online presence and deliver measurable results.
             </p>
-            </div>
-          </section>
-        </div>
-
-        {/* Call to Action Section */}
-        <section className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Get Started Today</h2>
-          <p className="text-lg text-gray-600 mb-6">Partner with us to build solutions that drive your business forward.</p>
+          </div>
+        </section>
+        {/* Call-to-Action Section */}
+        <section className="text-center">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get Started Today</h2>
+          <p className="text-lg text-gray-600 mb-4">
+            Partner with us to create innovative digital marketing strategies that increase your online presence and deliver measurable results.
+          </p>
           <a
             href="/contact"
             className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
