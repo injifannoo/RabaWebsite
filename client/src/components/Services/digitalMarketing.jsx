@@ -4,8 +4,8 @@ import { FaCheckCircle } from 'react-icons/fa'; // Importing an icon library
 
 const DigitalMarketing = () => {
   const listItem = (text) => (
-    <div className="flex items-start mb-2">
-      <FaCheckCircle className="text-blue-500 mt-1 mr-2" />
+    <div className="flex items-center mb-4 hover:shadow-md p-2 rounded transition">
+      <FaCheckCircle className="text-blue-500 mr-2" />
       <span>{text}</span>
     </div>
   );
@@ -23,21 +23,25 @@ const DigitalMarketing = () => {
         </header>
 
         {/* Focus Section */}
-        <section className="bg-slate-100 text-gray-600 mb-12 ml-10">
+        <section className="bg-slate-100 text-gray-600 flex flex-col items-center mb-12 ml-10 px-4 py-8">
           <h2 className="text-2xl text-center font-semibold text-gray-800 mb-4">Focus</h2>
-          <p className="text-gray-600 text-center">
-            Developing and executing targeted strategies to promote your brand, products, or services online, ensuring they reach the right audience through the most effective channels.
-          </p>
+          <div className="text-gray-600 flex-row flex-cols-4 items-center space-y-4">
+            {listItem("Developing and executing targeted strategies to promote your brand, products, or services online")}
+            {listItem("Ensuring they reach the right audience through the most effective channels")}
+            {listItem("Educating businesses and individuals about the importance of digital marketing")}
+            {listItem("Helping them understand its impact, tools, and strategies to grow their online presence")}
+          </div>
         </section>
 
-        {/* Involves Section */}
-        <h2 className="text-2xl text-center font-semibold text-gray-800 mb-10 mt-4">Involves</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 ml-10">
+        {/* Involves Section */}
+        <h2 className="text-2xl text-center font-semibold text-gray-800 mb-10 mt-4">Services We Offer</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 ml-10 gap-2">
           {/* Search Engine Optimization */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Search Engine Optimization (SEO)</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Search Engine Optimization (SEO)</h3>
               <p className="text-gray-600 mb-2">
                 Optimizing your website content to improve its visibility on search engines and attract organic traffic.
               </p>
@@ -51,7 +55,7 @@ const DigitalMarketing = () => {
           {/* Social Media Marketing */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Social Media Marketing</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Social Media Marketing</h3>
               <p className="text-gray-600 mb-2">
                 Building and managing your brand’s presence across social platforms to engage with your audience and drive conversions.
               </p>
@@ -65,7 +69,7 @@ const DigitalMarketing = () => {
           {/* Content Marketing */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Content Marketing</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Content Marketing</h3>
               <p className="text-gray-600 mb-2">
                 Creating valuable content that educates, entertains, and informs your audience, driving engagement and loyalty.
               </p>
@@ -79,7 +83,7 @@ const DigitalMarketing = () => {
           {/* Email Marketing */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Email Marketing</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Email Marketing</h3>
               <p className="text-gray-600 mb-2">
                 Crafting personalized email campaigns to nurture leads and maintain strong customer relationships.
               </p>
@@ -93,7 +97,7 @@ const DigitalMarketing = () => {
           {/* PPC Advertising */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Pay-Per-Click (PPC) Advertising</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Pay-Per-Click (PPC) Advertising</h3>
               <p className="text-gray-600 mb-2">
                 Managing targeted paid ad campaigns on platforms like Google Ads to drive immediate traffic and leads.
               </p>
@@ -107,7 +111,7 @@ const DigitalMarketing = () => {
           {/* Analytics and Reporting */}
           <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-              <h3 className="text-xl font-medium text-gray-800">Analytics and Reporting</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-4">Analytics and Reporting</h3>
               <p className="text-gray-600 mb-2">
                 Continuously analyzing data to measure performance, optimize strategies, and ensure marketing goals are met.
               </p>
@@ -117,24 +121,8 @@ const DigitalMarketing = () => {
             </div>
           </section>
 
-
         </div>
-        <section className="bg-slate-100 text-center mb-8 flex items-center justify-center">
-          <div className="grid-cols-2">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Creating Awareness about Digital Marketing</h3>
-            <p className="text-gray-600">
-              Educating businesses and individuals about the importance of digital marketing, helping them understand its impact, tools, and strategies to grow their online presence.
-            </p>
-          </div>
-        </section>
-        <section className="bg-slate-100 text-center mb-8 flex items-center justify-center">
-          <div className="grid-cols-2">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Goal</h2>
-            <p className="text-lg text-gray-600 mb-4">
-              Partner with us to create innovative digital marketing strategies that increase your online presence and deliver measurable results.
-            </p>
-          </div>
-        </section>
+      
         {/* Call-to-Action Section */}
         <section className="text-center">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get Started Today</h2>

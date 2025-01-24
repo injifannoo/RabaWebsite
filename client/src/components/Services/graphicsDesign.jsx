@@ -32,7 +32,7 @@ const GraphicDesign = () => {
             Creating visually striking and impactful designs that communicate your message effectively and leave a lasting impression.
           </p>
         </div>
-        <h2 className="text-2xl text-center font-semibold text-gray-800 mb-10 mt-4">Involves</h2>
+        <h2 className="text-2xl text-center font-semibold text-gray-800 mb-10 mt-4">Services We Offer</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 ml-10">
           {/* Services Section */}

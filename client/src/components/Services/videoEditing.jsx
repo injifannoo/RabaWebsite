@@ -26,7 +26,7 @@ const VideoEditing = () => {
 
         <section className="bg-slate-100 mb-12">
             <div className="text-gray-600 mb-4 ml-4">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Involves</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Services We Offer</h2>
           <div className="mb-6">
             <h3 className="text-xl font-medium text-gray-800">Video Editing</h3>
             <p className="text-gray-600">
