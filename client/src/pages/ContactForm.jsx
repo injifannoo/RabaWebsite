@@ -80,22 +80,35 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
     >
-      {/* Description Section */}
-      <div className="description-section w-full md:w-1/3 p-6 md:ml-4 md:p-8 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-600 text-white rounded-lg shadow-lg flex items-center justify-center">
-        <div>
-          <h2 className="text-center text-xl md:text-3xl font-bold text-black mb-4 md:mb-12">Get In Touch With Us</h2>
-          <p className=" text-sm md:text-lg mb-6 text-justify">
-            We're always here to help! Whether you have a question, need support, or want to collaborate, don't hesitate to reach out. Our team is ready to provide you with the best solutions tailored to your needs. Reach out today, and let's start the conversation!
+      {/* description Section */}
+      <div className="w-full md:w-1/3 p-6 md:p-8 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-600 text-white rounded-2xl shadow-xl flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-6">Let's Connect!</h2>
+          <p className="text-base md:text-lg mb-8 leading-relaxed">
+            Have questions? Need support? Or just a brilliant idea to share?
+            We’re here to make it happen. Drop us a message and let’s create something amazing together! 🚀✨
           </p>
-          <div className="contact-info">
-            <h3 className="text-xl font-semibold mb-2">Contact Us:</h3>
-            <p className="mb-1">📍 <strong>Address:</strong> Addis Ababa, Ethiopia</p>
-            <p className="mb-1">📧 <strong>Email:</strong> <a href="mailto:rabatech.info@gmail.com" className="text-yellow-200 hover:text-yellow-400">rabatech.info@gmail.com</a></p>
-            <p className="mb-1">📞 <strong>Phone:</strong> <a href="tel:+251962408198/ +251972900847" className="text-yellow-200 hover:text-yellow-400">+251962408198/+251972900847</a></p>
-            <p>🌐 <strong>Website:</strong> <a href="https://www.rabatechnologies.com" target="_blank" rel="noopener noreferrer" className="text-yellow-200 hover:text-yellow-400">https://www.rabatechnologies.com</a></p>
+
+          <div className="bg-white bg-opacity-20 p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-3 text-yellow-300">Contact Us:</h3>
+            <p className="mb-2">📍 <strong>Address:</strong> Addis Ababa, Ethiopia</p>
+            <p className="mb-2">📧 <strong>Email:</strong>
+              <a href="mailto:info@rabatechnologies.com" className="text-yellow-200 hover:text-yellow-400 ml-1">
+                info@rabatechnologies.com
+              </a>
+            </p>
+            <p className="mb-2">📞 <strong>Phone:</strong>
+              <a href="tel:+251962408198" className="text-yellow-200 hover:text-yellow-400 ml-1">
+                +251962408198
+              </a> /
+              <a href="tel:+251972900847" className="text-yellow-200 hover:text-yellow-400 ml-1">
+                +251972900847
+              </a>
+            </p>
           </div>
         </div>
       </div>
+
       {/* Form Section */}
       <div className="form-section w-full md:w-2/3 px-4 md:px-8 py-6 md:py-8 bg-white rounded-lg shadow-lg mt-6 md:mt-0">
         <h1 className="text-blue-700 text-2xl md:text-3xl font-bold text-center mb-8">Contact Us</h1>
@@ -136,9 +149,8 @@ const ContactForm = () => {
 
         {status && (
           <p
-            className={`mt-4 text-center ${
-              status.includes("successfully") ? "text-green-500" : "text-red-500"
-            }`}
+            className={`mt-4 text-center ${status.includes("successfully") ? "text-green-500" : "text-red-500"
+              }`}
           >
             {status}
           </p>
