@@ -94,7 +94,7 @@ const AppRoutes = () => (
   <Routes>
     {/* Single Page Layout */}
     <Route path="/" element={<SinglePageLayout />} />
-    <Route path="/home" element={<HomePage />} />
+    <Route path="/" element={<HomePage />} />
     <Route path="/about-us" element={<AboutUs />} />
     <Route path="/services" element={<Services />} />
     <Route path="/our-project" element={<OurProject />} />
