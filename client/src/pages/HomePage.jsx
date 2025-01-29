@@ -1,4 +1,4 @@
-import homeImage from '../assets/images/homebg.png';
+import homeImage from '../assets/images/homebg.jpg';
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
