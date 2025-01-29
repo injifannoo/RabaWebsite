@@ -1,5 +1,5 @@
 import React from "react";
-import homeImag from '../../assets/images/homebg.png';
+import homeImag from '../../assets/images/homebg.jpg';
 import mv from '../../assets/images/mv.jpg';
 import homeImage from '../../assets/images/cover.jpg';
 import rabaS from '../../assets/images/rabaS.jpg';
