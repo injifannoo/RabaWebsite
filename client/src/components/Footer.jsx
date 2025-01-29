@@ -52,9 +52,9 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex space-x-6">
-            <a href="mailto:info@raba.com" className="text-white hover:text-gray-300">
+            <a href="mailto:info@rabatechnologies.com" className="text-white hover:text-gray-300">
               <FontAwesomeIcon icon={faEnvelope} size="lg" />
-              <span className="ml-2">rabatech.info@gmail.com</span>
+              <span className="ml-2">info@rabatechnologies.com</span>
             </a>
           </div>
           
