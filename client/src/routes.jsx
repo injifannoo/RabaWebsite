@@ -38,7 +38,7 @@ const SinglePageLayout = () => {
       <section
         id="home"
         className="h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/assets/images/homebg.png')` }}
+        style={{ backgroundImage: `url('/assets/images/homebg.jpg')` }}
       >
         <HomePage />
       </section>
@@ -94,7 +94,7 @@ const AppRoutes = () => (
   <Routes>
     {/* Single Page Layout */}
     <Route path="/" element={<SinglePageLayout />} />
-    <Route path="/" element={<HomePage />} />
+    <Route path="/home" element={<HomePage />} />
     <Route path="/about-us" element={<AboutUs />} />
     <Route path="/services" element={<Services />} />
     <Route path="/our-project" element={<OurProject />} />
