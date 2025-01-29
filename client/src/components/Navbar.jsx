@@ -115,26 +115,27 @@ const Navbar = () => {
               About
             </a>
           </li> */}
-       
-       <li
+
+          <li
             className="relative"
             onMouseEnter={handleAboutMouseEnter}
             onMouseLeave={handleAboutMouseLeave}
           >
-            <a href="#about-us" className="hover:text-blue-300">
+            <a href="/#about-us" className="hover:text-blue-300">
               About
             </a>
             {isAboutOpen && (
               <ul
-                className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg"
+                className="absolute left-0 mt-2 w-48  bg-gray-200 text-blue-950 shadow-lg rounded-lg"
                 onMouseEnter={handleAboutMouseEnter}
                 onMouseLeave={handleAboutMouseLeave}
               >
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/learn-more" className="block">Learn More</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
-                  <a href="/teams" className="block">Our Team</a>
+                <li id="#teams" className="px-4 py-2 hover:text-blue-300">
+                  <a href="/#teams" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+                    Our Team                </a>
                 </li>
               </ul>
             )}
@@ -145,56 +146,56 @@ const Navbar = () => {
             </a>
           </li> */}
           <li
-             className="relative"
-             onMouseEnter={handleServiceMouseEnter}
-             onMouseLeave={handleServiceMouseLeave}
-           >
-            <a href="#services" className="hover:text-blue-300">
+            className="relative"
+            onMouseEnter={handleServiceMouseEnter}
+            onMouseLeave={handleServiceMouseLeave}
+          >
+            <a href="/#services" className="hover:text-blue-300">
               Services
             </a>
             {isServicesOpen && (
-               <ul
-               className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg"
-               onMouseEnter={handleServiceMouseEnter}
-               onMouseLeave={handleServiceMouseLeave}
-             >
-                <li className="px-4 py-2 hover:bg-gray-200">
+              <ul
+              className="absolute left-0 mt-2 w-48  bg-gray-200 text-blue-950 shadow-lg rounded-lg"
+              onMouseEnter={handleServiceMouseEnter}
+                onMouseLeave={handleServiceMouseLeave}
+              >
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/web-development" className="block">Web development</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/app-development" className="block">Mobile development</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/digital-marketing" className="block">Digital Marketing</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/continous-maintenance" className="block">Continous Maintenance
                   </a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/graphics-design" className="block">Graphics Design</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/video-editing" className="block">Video Editing</a>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-200">
+                <li className="px-4 py-2 hover:text-blue-300">
                   <a href="/ui-ux-design" className="block">UI/UX Design</a>
                 </li>
               </ul>
             )}
           </li>
           <li>
-            <a href="#our-project" className="hover:text-blue-300">
+            <a href="/#our-project" className="hover:text-blue-300">
               Projects
             </a>
           </li>
           <li>
-            <a href="#blogs" className="hover:text-blue-300">
+            <a href="/#blogs" className="hover:text-blue-300">
               Blogs
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-300">
+            <a href="/#contact" className="hover:text-blue-300">
               Contact
             </a>
           </li>
@@ -224,27 +225,27 @@ const Navbar = () => {
               </li>
             )}
             <li>
-              <a href="#about-us" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+              <a href="/#about-us" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 About
               </a>
             </li>
             <li>
-              <a href="#services" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+              <a href="/#services" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Services
               </a>
             </li>
             <li>
-              <a href="#our-project" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+              <a href="/#our-project" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Projects
               </a>
             </li>
             <li>
-              <a href="#blogs" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+              <a href="/#blogs" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Blogs
               </a>
             </li>
             <li>
-              <a href="#contact" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
+              <a href="/#contact" className="block hover:text-blue-300" onClick={handleMenuItemClick}>
                 Contact
               </a>
             </li>
