@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "concurrently \"npm run dev --prefix Backend\" \"vite\"",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "dev": "concurrently \"npm run dev --prefix Backend\" \"vite\"",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "types": "module",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",
@@ -28,7 +28,7 @@
     "mysql2": "^3.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0",
+    "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.13.1",
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.28.0",

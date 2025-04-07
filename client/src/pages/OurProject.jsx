@@ -14,24 +14,19 @@ const projects = [
         description: "The job board web app connects job seekers with employers through profile creation and job applications. It allows employers to post job openings and manage candidates, while providing advanced search filters and personalized job recommendations for users.",
     },
     {
-        title:"Project 3",
-        imageUrl:"client/src/assets/images/projectImage.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+        title:"Kasbarks Pet Care Mobile App",
+        imageUrl:"client/src/assets/images/project_images/kasbarks11.jpg", 
+        description: "This project focused on enhancing the user interface and integrating essential features into a mobile application, such as backend APIs, user authentication, and real-time notifications. I improved the UI for a better user experience, integrated backend services, and implemented secure user authentication. I also set up a real-time notification system and ensured the app's compatibility across different devices and screen sizes. The result was a user-friendly, responsive app with seamless backend integration.",
     },
     {
-        title:"Project 3",
-        imageUrl:"client/src/assets/images/projectImage.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+        title:"samuelmekonnen.com",
+        imageUrl:"client/src/assets/images/project_images/samuel.png", 
+        description: "The Samuel Mekonnen Law Office website is a platform offering legal information and consultation services. It highlights the office’s commitment to providing high-standard legal services, including free consultations. The website connects clients to legal representation and consultation in Ethiopia.",
     },
     {
-        title:"Project 4",
-        imageUrl:"client/src/assets/images/projectImage.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
-    },
-    {
-        title:"Project 5",
-        imageUrl:"client/src/assets/images/projectImage.png", 
-        description: "Here the  description  for the project goes. The problems that this project aims to solve and the way it differs from others who offer solution to this problem.  just write a description.",
+        title:"wbklegatafo.com",
+        imageUrl:"client/src/assets/images/project_images/tafo-church.png", 
+        description: "The Lega Tafo B/K Church website is a platform designed to proclaim God's word globally. It serves as a digital ministry tool, enabling the church to share messages, teachings, and spiritual resources with a worldwide audience while providing information about church services, events, and programs to foster community and inspire faith.",
     },
 ];
 
@@ -80,7 +75,7 @@ const Projects = () => {
                 <h2 className="text-center text-xl md:text-3xl font-bold text-blue-700 mb-3">Our projects</h2>
                 <hr className="w-24 h-1 bg-blue-500 border-0 rounded " />
             </div>
-            <TransitionGroup className="grid grid-cols- md:grid-cols-3 max-w-[1200px] gap-5 md:gap-14 m-auto px-3 my-5 "> 
+            <TransitionGroup className="grid grid-cols-2 md:grid-cols-3 max-w-[1200px] gap-5 md:gap-14 m-auto px-3 my-5 "> 
                 {projects.map((project, indx) => (
                     <CSSTransition
                         key={indx}
@@ -94,9 +89,9 @@ const Projects = () => {
                             animate={controls}
                             whileHover={{ scale: 1.1 }}
                         >
-                            <div className="w-full h-full hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-">
+                            <div className="h-full w-full object-cover hover:bg-[#FAF8F5] hover:translate-x-0 hover:scale-105 flex justify-center items-center p-">
                                 <img
-                                className=" h-full w-full object-cover rounded-lg"
+                                className=" h-full w-full object-cover object-center rounded-lg"
                                     
                                     src={project.imageUrl}
                                     alt={project.title}
